@@ -1,0 +1,2701 @@
+[
+    {
+        "data": [
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "misuse",
+                        "object": "data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (AI Data Misuse) results in incorrect processing and operational failures, which manifests as Threat B (Increased Error Rates). These system errors and instabilities create security gaps that allow Threat C (Data Breaches) to occur.",
+                    "composed_threat_path_description": "AI systems misusing data leads to high error rates and ineffective design, creating security voids that attackers exploit to breach personal data.",
+                    "composed_threat_svo": {
+                        "subject": "data-misusing AI systems",
+                        "verb": "precipitate",
+                        "object": "security-critical data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "misuse",
+                        "object": "data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Vulnerability Exploitation",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "exploit",
+                        "object": "known vulnerabilities"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (AI Data Misuse) leads to system faults and Threat B (Increased Error Rates). The resulting unstable state creates exploitable conditions (vulnerabilities) that Threat C (Vulnerability Exploitation) targets.",
+                    "composed_threat_path_description": "Operational failures from AI data misuse result in increased system errors, exposing vulnerabilities that are subsequently exploited by attackers.",
+                    "composed_threat_svo": {
+                        "subject": "AI data misuse",
+                        "verb": "exposes",
+                        "object": "exploitable system vulnerabilities"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "misuse",
+                        "object": "data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Integrity and Confidentiality Breaches",
+                    "svo_representation": {
+                        "subject": "unauthorized actors",
+                        "verb": "breach",
+                        "object": "data integrity and confidentiality"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The misuse of data by AI (Threat A) causes system errors and failures (Threat B). These failures degrade the reliability of data handling, leading directly to Threat C (Data Integrity and Confidentiality Breaches).",
+                    "composed_threat_path_description": "AI data misuse causes significant error rates, which undermines system reliability and allows unauthorized actors to breach data integrity and confidentiality.",
+                    "composed_threat_svo": {
+                        "subject": "operational AI data misuse",
+                        "verb": "undermines",
+                        "object": "data integrity and confidentiality"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "misuse",
+                        "object": "data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (AI Data Misuse) triggers operational errors described in Threat B (Increased Error Rates). These errors often result in the accidental exposure of data, leading to Threat C (Information Leakage).",
+                    "composed_threat_path_description": "Erroneous handling of data by AI systems leads to increased error rates, which results in the leakage of sensitive information to malicious actors.",
+                    "composed_threat_svo": {
+                        "subject": "erroneous AI data handling",
+                        "verb": "causes",
+                        "object": "sensitive information leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "misuse",
+                        "object": "data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Cyber Threats Impacting Critical Services",
+                    "svo_representation": {
+                        "subject": "cyber threats",
+                        "verb": "impact",
+                        "object": "critical services"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (AI Data Misuse) results in safety incidents and error rates (Threat B). When these errors occur in essential systems, they contribute to Threat C (Cyber Threats Impacting Critical Services).",
+                    "composed_threat_path_description": "Data misuse by AI systems drives up error rates and safety incidents, which disrupts the availability and security of critical services.",
+                    "composed_threat_svo": {
+                        "subject": "AI-driven data misuse",
+                        "verb": "disrupts",
+                        "object": "critical service operations"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "misuse",
+                        "object": "data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (AI Data Misuse) leads to unexpected system behavior, causing Threat B (User Confusion). Confused users are less vigilant and more susceptible to Threat C (Phishing and Spoofing Attacks).",
+                    "composed_threat_path_description": "AI misuse of data creates user confusion and errors, rendering users vulnerable to deception and theft of sensitive information via phishing.",
+                    "composed_threat_svo": {
+                        "subject": "AI-induced user confusion",
+                        "verb": "facilitates",
+                        "object": "successful phishing attacks"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "misuse",
+                        "object": "data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (AI Data Misuse) causes Threat B (User Confusion and Errors). These human errors often lead to accidental security lapses, resulting in Threat C (Information Leakage).",
+                    "composed_threat_path_description": "Confusion arising from AI data misuse leads users to make errors, which results in the unintended access of sensitive data by malicious actors.",
+                    "composed_threat_svo": {
+                        "subject": "confusion arising from AI data misuse",
+                        "verb": "leads to",
+                        "object": "unintended data exposure"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Operational Failures",
+                    "svo_representation": {
+                        "subject": "AI system failures",
+                        "verb": "disrupt",
+                        "object": "operations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration and Stress",
+                    "svo_representation": {
+                        "subject": "poor usability and lack of user involvement",
+                        "verb": "cause",
+                        "object": "user frustration and stress"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Operational Failures) creates a stressful environment characterized by disruption. This leads to Threat B (User Frustration and Stress). High levels of stress and frustration reduce cognitive vigilance, making users more susceptible to Threat C (Phishing and Spoofing Attacks).",
+                    "composed_threat_path_description": "Operational disruptions generate significant user stress and frustration, which erodes security awareness and allows phishing attackers to successfully steal sensitive information.",
+                    "composed_threat_svo": {
+                        "subject": "disruption-induced user stress",
+                        "verb": "facilitates",
+                        "object": "successful phishing attacks"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Operational Failures",
+                    "svo_representation": {
+                        "subject": "AI system failures",
+                        "verb": "disrupt",
+                        "object": "operations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Reduced Usability",
+                    "svo_representation": {
+                        "subject": "poor user-centered design",
+                        "verb": "results in",
+                        "object": "reduced system usability"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Operational Failures) renders the system difficult or impossible to use, resulting in Threat B (Reduced Usability). To continue working, users bypass the unusable system in favor of unsecure, unauthorized tools (Shadow IT), leading to Threat C (Information Leakage).",
+                    "composed_threat_path_description": "System failures severely reduce usability, driving users toward insecure, unmonitored communication channels where malicious actors can easily access sensitive data.",
+                    "composed_threat_svo": {
+                        "subject": "system unusability",
+                        "verb": "drives",
+                        "object": "unauthorized data leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Operational Failures",
+                    "svo_representation": {
+                        "subject": "AI system failures",
+                        "verb": "disrupt",
+                        "object": "operations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Operational Failures) creates confusion and chaotic workflows, causing Threat B (Increased Error Rates). These human errors often involve accidental mishandling of data or configurations, which results in Threat C (Data Breaches).",
+                    "composed_threat_path_description": "Disrupted operations lead to a spike in user error rates, causing accidental data exposures that result in confirmed data breaches.",
+                    "composed_threat_svo": {
+                        "subject": "failure-induced human error",
+                        "verb": "causes",
+                        "object": "data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Operational Failures",
+                    "svo_representation": {
+                        "subject": "AI system failures",
+                        "verb": "disrupt",
+                        "object": "operations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Integrity and Confidentiality Breaches",
+                    "svo_representation": {
+                        "subject": "unauthorized actors",
+                        "verb": "breach",
+                        "object": "data integrity and confidentiality"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Operational Failures) leads to chaotic system states and user confusion, manifesting as Threat B (Increased Error Rates). These errors compromise the accuracy and protection of data, leading to Threat C (Data Integrity and Confidentiality Breaches).",
+                    "composed_threat_path_description": "Operational instability increases user mistakes, which degrade data controls and allow unauthorized actors to breach data integrity and confidentiality.",
+                    "composed_threat_svo": {
+                        "subject": "operational errors",
+                        "verb": "compromise",
+                        "object": "data integrity and confidentiality"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Operational Failures",
+                    "svo_representation": {
+                        "subject": "AI system failures",
+                        "verb": "disrupt",
+                        "object": "operations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Poor User Engagement",
+                    "svo_representation": {
+                        "subject": "unfriendly systems",
+                        "verb": "cause",
+                        "object": "low user engagement and reduced adoption rates"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Operational Failures) creates a negative user experience that fosters Threat B (Poor User Engagement). When users disengage from secure, sanctioned systems, they migrate to insecure platforms, facilitating Threat C (Information Leakage).",
+                    "composed_threat_path_description": "Frequent operational failures erode user engagement, causing a shift to unauthorized tools that exposes sensitive data to malicious access.",
+                    "composed_threat_svo": {
+                        "subject": "low user engagement",
+                        "verb": "precipitates",
+                        "object": "exposure of sensitive data"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Operational Failures",
+                    "svo_representation": {
+                        "subject": "AI system failures",
+                        "verb": "disrupt",
+                        "object": "operations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration and Stress",
+                    "svo_representation": {
+                        "subject": "poor usability and lack of user involvement",
+                        "verb": "cause",
+                        "object": "user frustration and stress"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Malware and Ransomware Attacks",
+                    "svo_representation": {
+                        "subject": "malware and ransomware",
+                        "verb": "attack",
+                        "object": "data and services"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Operational Failures) causes significant Threat B (User Frustration and Stress). Frustrated users are more likely to engage in risky behaviors or ignore security warnings, increasing the success rate of Threat C (Malware and Ransomware Attacks).",
+                    "composed_threat_path_description": "Operational failures trigger user frustration and impulsive behavior, creating opportunities for malware and ransomware to successfully attack data and services.",
+                    "composed_threat_svo": {
+                        "subject": "frustrated user behavior",
+                        "verb": "enables",
+                        "object": "malware infection"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Breach",
+                    "svo_representation": {
+                        "subject": "unauthorized access",
+                        "verb": "compromise",
+                        "object": "sensitive data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration and Stress",
+                    "svo_representation": {
+                        "subject": "poor usability and lack of user involvement",
+                        "verb": "cause",
+                        "object": "user frustration and stress"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The initial data breach (Threat A) creates a high-stress environment and psychological burden on users, directly leading to user frustration and stress (Threat B). This heightened emotional state and cognitive load make users significantly more vulnerable to social engineering, enabling attackers to succeed in phishing and spoofing attacks (Threat C).",
+                    "composed_threat_path_description": "A data breach compromising sensitive data triggers severe user stress and frustration, which lowers vigilance and facilitates successful phishing and spoofing attacks targeting the already victimized users.",
+                    "composed_threat_svo": {
+                        "subject": "breach-induced user stress",
+                        "verb": "facilitates",
+                        "object": "phishing and spoofing susceptibility"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Breach",
+                    "svo_representation": {
+                        "subject": "unauthorized access",
+                        "verb": "compromise",
+                        "object": "sensitive data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The chaotic aftermath of a data breach (Threat A) often forces users into complex remediation workflows or panicked behaviors, resulting in increased error rates (Threat B). These frequent human errors then directly lead to accidental information leakage and unauthorized data access (Threat C).",
+                    "composed_threat_path_description": "The compromise of sensitive data disrupts standard operations, causing a spike in user error rates that subsequently results in further information leakage and unauthorized access.",
+                    "composed_threat_svo": {
+                        "subject": "incident-related human errors",
+                        "verb": "trigger",
+                        "object": "secondary information leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Breach",
+                    "svo_representation": {
+                        "subject": "unauthorized access",
+                        "verb": "compromise",
+                        "object": "sensitive data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Integrity and Confidentiality Breaches",
+                    "svo_representation": {
+                        "subject": "unauthorized actors",
+                        "verb": "breach",
+                        "object": "data integrity and confidentiality"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "A data breach (Threat A) disrupts workflows and introduces cognitive strain, causing increased error rates among users (Threat B). These errors compromise the accuracy and reliability of data handling, resulting in data integrity and confidentiality breaches (Threat C).",
+                    "composed_threat_path_description": "An initial breach destabilizes user performance, leading to increased error rates that ultimately compromise overall data integrity and confidentiality.",
+                    "composed_threat_svo": {
+                        "subject": "post-breach operational errors",
+                        "verb": "cause",
+                        "object": "systemic data integrity failures"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Data Breach",
+                    "svo_representation": {
+                        "subject": "unauthorized access",
+                        "verb": "compromise",
+                        "object": "sensitive data"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Poor User Engagement",
+                    "svo_representation": {
+                        "subject": "unfriendly systems",
+                        "verb": "cause",
+                        "object": "low user engagement and reduced adoption rates"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Inconsistent Security Standards",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "exploit",
+                        "object": "inconsistent security standards"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The occurrence of a data breach (Threat A) severely damages user trust and satisfaction, leading to poor user engagement and reduced adoption of secure, sanctioned systems (Threat B). This abandonment drives users toward shadow IT or unmanaged solutions, creating an environment of inconsistent security standards that malicious actors exploit (Threat C).",
+                    "composed_threat_path_description": "A data breach erodes user trust, causing low engagement and the adoption of unverified alternatives, which results in inconsistent security standards vulnerable to exploitation.",
+                    "composed_threat_svo": {
+                        "subject": "breach-driven user disengagement",
+                        "verb": "leads to",
+                        "object": "exploitation of inconsistent security standards"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Unauthorized Modifications",
+                    "svo_representation": {
+                        "subject": "unauthorized modifications",
+                        "verb": "introduce",
+                        "object": "vulnerabilities and non-compliance issues"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Unauthorized modifications (Threat A) introduce system behaviors that are not reflected in existing interfaces, creating a state of inadequate feedback (Threat B). This resulting user confusion and error-prone environment facilitates unauthorized data access and information leakage (Threat C) by malicious actors.",
+                    "composed_threat_path_description": "Unauthorized system modifications create discrepancies in user feedback mechanisms, leading to user confusion that results in accidental information leakage.",
+                    "composed_threat_svo": {
+                        "subject": "unauthorized modifications",
+                        "verb": "precipitate",
+                        "object": "information leakage via user confusion"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Unauthorized Modifications",
+                    "svo_representation": {
+                        "subject": "unauthorized modifications",
+                        "verb": "introduce",
+                        "object": "vulnerabilities and non-compliance issues"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Training and Support",
+                    "svo_representation": {
+                        "subject": "inadequate training and support",
+                        "verb": "prevent",
+                        "object": "users from effectively utilizing system functionalities"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Unauthorized modifications (Threat A) alter system functionality without corresponding updates to training, rendering support mechanisms inadequate (Threat B). Users, unable to effectively utilize the security features, make errors that expose sensitive data to unauthorized access (Threat C).",
+                    "composed_threat_path_description": "System changes from unauthorized modifications render user training obsolete, preventing effective security usage and leading to data exposure.",
+                    "composed_threat_svo": {
+                        "subject": "unauthorized modifications",
+                        "verb": "create",
+                        "object": "security gaps via untrained users"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Unauthorized Modifications",
+                    "svo_representation": {
+                        "subject": "unauthorized modifications",
+                        "verb": "introduce",
+                        "object": "vulnerabilities and non-compliance issues"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Unauthorized modifications (Threat A) introduce instability and unexpected behaviors, resulting in increased error rates among users (Threat B). These heightened error rates create opportunities for attackers to breach data integrity and confidentiality (Threat C).",
+                    "composed_threat_path_description": "Instability caused by unauthorized modifications increases user error rates, which subsequently opens vectors for data breaches.",
+                    "composed_threat_svo": {
+                        "subject": "modification-induced errors",
+                        "verb": "facilitate",
+                        "object": "data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Unauthorized Modifications",
+                    "svo_representation": {
+                        "subject": "unauthorized modifications",
+                        "verb": "introduce",
+                        "object": "vulnerabilities and non-compliance issues"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Unauthorized modifications (Threat A) create discrepancies between system behavior and user expectations, leading to inadequate feedback and confusion (Threat B). This confusion makes users more susceptible to deception, allowing phishing and spoofing attacks to succeed (Threat C).",
+                    "composed_threat_path_description": "The confusion caused by unauthorized modifications and poor feedback makes users vulnerable to phishing attacks disguised as legitimate system communications.",
+                    "composed_threat_svo": {
+                        "subject": "modification-induced confusion",
+                        "verb": "increases",
+                        "object": "susceptibility to phishing"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "AI Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "infringe",
+                        "object": "individuals' rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration and Stress",
+                    "svo_representation": {
+                        "subject": "poor usability and lack of user involvement",
+                        "verb": "cause",
+                        "object": "user frustration and stress"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The infringement of rights by AI systems (Threat A) creates a hostile user environment, directly causing user frustration and stress (Threat B). This psychological stress lowers user vigilance and cognitive defenses, making them significantly more susceptible to Phishing and Spoofing Attacks (Threat C).",
+                    "composed_threat_path_description": "AI systems that infringe on rights induce severe user stress, which degrades security awareness and enables attackers to successfully execute phishing and spoofing campaigns.",
+                    "composed_threat_svo": {
+                        "subject": "rights-infringing AI",
+                        "verb": "increases",
+                        "object": "stress-induced phishing susceptibility"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "AI Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "infringe",
+                        "object": "individuals' rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "AI Misuse involving hidden or opaque operations (Threat A) necessitates inadequate feedback mechanisms (Threat B) to conceal the infringement. This lack of feedback causes user confusion and errors, which directly facilitates Information Leakage and Unauthorized Data Access (Threat C) through accidental exposure.",
+                    "composed_threat_path_description": "Opaque AI operations lead to user confusion regarding system states, resulting in operational errors that inadvertently expose sensitive data to unauthorized access.",
+                    "composed_threat_svo": {
+                        "subject": "opaque AI feedback",
+                        "verb": "precipitates",
+                        "object": "unintended information leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "AI Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "infringe",
+                        "object": "individuals' rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Conflicting User Requirements and Stakeholder Disagreements",
+                    "svo_representation": {
+                        "subject": "unresolved conflicts between user requirements and stakeholder expectations",
+                        "verb": "cause",
+                        "object": "compromised system features, project delays, and user dissatisfaction"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Vulnerability Exploitation",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "exploit",
+                        "object": "known vulnerabilities"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The push for AI systems that infringe rights (Threat A) generates conflicts between user needs and stakeholder goals (Threat B). These unresolved conflicts result in compromised system features, which inherently act as Known Vulnerabilities that attackers then Exploit (Threat C).",
+                    "composed_threat_path_description": "Stakeholder insistence on intrusive AI creates development conflicts that result in compromised, vulnerable features, providing a direct vector for attackers to exploit the system.",
+                    "composed_threat_svo": {
+                        "subject": "conflicting AI requirements",
+                        "verb": "introduce",
+                        "object": "exploitable feature vulnerabilities"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "AI Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "infringe",
+                        "object": "individuals' rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Design Rigidity and Inflexibility",
+                    "svo_representation": {
+                        "subject": "rigid design processes",
+                        "verb": "hinder",
+                        "object": "iterative improvements and user feedback incorporation"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Inconsistent Security Standards",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "exploit",
+                        "object": "inconsistent security standards"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "AI Misuse often relies on design patterns that disregard user-centered feedback (Threat A), leading to Rigid Design Processes (Threat B). These rigid systems cannot adapt to new security needs, resulting in Inconsistent Security Standards (Threat C) that are easily exploited.",
+                    "composed_threat_path_description": "The refusal to incorporate user-centric feedback in AI design leads to system rigidity, preventing necessary security adaptations and resulting in exploitable security inconsistencies.",
+                    "composed_threat_svo": {
+                        "subject": "rigid AI design processes",
+                        "verb": "generate",
+                        "object": "inconsistent security standards"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "AI Misuse",
+                    "svo_representation": {
+                        "subject": "AI systems",
+                        "verb": "infringe",
+                        "object": "individuals' rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Reduced Usability",
+                    "svo_representation": {
+                        "subject": "poor user-centered design",
+                        "verb": "results in",
+                        "object": "reduced system usability"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "AI systems that infringe rights (Threat A) inherently fail to meet user needs, resulting in Reduced Usability (Threat B). This reduction in usability forces users into error-prone behaviors or unsafe workarounds, which directly leads to Data Breaches (Threat C).",
+                    "composed_threat_path_description": "Rights-infringing AI designs degrade system usability, causing frequent user errors and workarounds that open the door to successful data breaches.",
+                    "composed_threat_svo": {
+                        "subject": "usability-degrading AI",
+                        "verb": "facilitates",
+                        "object": "systemic data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Regulatory Enforcement Weaknesses",
+                    "svo_representation": {
+                        "subject": "weak enforcement mechanisms",
+                        "verb": "allow",
+                        "object": "non-compliant AI systems to operate"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Regulatory enforcement weaknesses (A) allow the operation of systems with inadequate feedback mechanisms (B). This lack of feedback causes user confusion, making them unable to distinguish legitimate system behaviors from deceptive attempts, thereby increasing susceptibility to phishing and spoofing attacks (C).",
+                    "composed_threat_path_description": "Weak regulatory oversight permits AI systems with poor feedback loops, leaving users confused and vulnerable to deceptive phishing attacks that mimic system communications.",
+                    "composed_threat_svo": {
+                        "subject": "regulatory negligence",
+                        "verb": "amplifies",
+                        "object": "susceptibility to phishing attacks"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Regulatory Enforcement Weaknesses",
+                    "svo_representation": {
+                        "subject": "weak enforcement mechanisms",
+                        "verb": "allow",
+                        "object": "non-compliant AI systems to operate"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "System Complexity",
+                    "svo_representation": {
+                        "subject": "highly complex systems",
+                        "verb": "cause",
+                        "object": "user difficulty and reduced usability"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Vulnerability Exploitation",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "exploit",
+                        "object": "known vulnerabilities"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Weak enforcement (A) permits the deployment of highly complex systems without adequate usability checks (B). This complexity leads to configuration errors and oversight, creating security gaps that attackers exploit (C).",
+                    "composed_threat_path_description": "Lax enforcement allows overly complex AI systems to operate, resulting in user difficulty and misconfigurations that serve as entry points for vulnerability exploitation.",
+                    "composed_threat_svo": {
+                        "subject": "unchecked system complexity",
+                        "verb": "facilitates",
+                        "object": "exploitation of complex vulnerabilities"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Regulatory Enforcement Weaknesses",
+                    "svo_representation": {
+                        "subject": "weak enforcement mechanisms",
+                        "verb": "allow",
+                        "object": "non-compliant AI systems to operate"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Training and Support",
+                    "svo_representation": {
+                        "subject": "inadequate training and support",
+                        "verb": "prevent",
+                        "object": "users from effectively utilizing system functionalities"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Malware and Ransomware Attacks",
+                    "svo_representation": {
+                        "subject": "malware and ransomware",
+                        "verb": "attack",
+                        "object": "data and services"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Regulatory weaknesses (A) allow the deployment of systems without proper training mandates (B). Untrained users, lacking knowledge of security protocols, inadvertently execute malicious payloads, facilitating malware and ransomware attacks (C).",
+                    "composed_threat_path_description": "The absence of enforced training requirements leads to user incompetence, creating an environment where malware and ransomware can easily compromise data and services.",
+                    "composed_threat_svo": {
+                        "subject": "lack of enforced training",
+                        "verb": "escalates",
+                        "object": "malware infection risks"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Regulatory Enforcement Weaknesses",
+                    "svo_representation": {
+                        "subject": "weak enforcement mechanisms",
+                        "verb": "allow",
+                        "object": "non-compliant AI systems to operate"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Weak enforcement (A) permits ineffective designs that lead to high error rates (B). These operational errors by users directly result in the accidental exposure of data, leading to breaches (C).",
+                    "composed_threat_path_description": "Regulatory failures allow for error-prone system designs, causing frequent user mistakes that inadvertently result in significant data breaches.",
+                    "composed_threat_svo": {
+                        "subject": "design-induced user errors",
+                        "verb": "trigger",
+                        "object": "accidental data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Regulatory Enforcement Weaknesses",
+                    "svo_representation": {
+                        "subject": "weak enforcement mechanisms",
+                        "verb": "allow",
+                        "object": "non-compliant AI systems to operate"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Poor User Engagement",
+                    "svo_representation": {
+                        "subject": "unfriendly systems",
+                        "verb": "cause",
+                        "object": "low user engagement and reduced adoption rates"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Inconsistent Security Standards",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "exploit",
+                        "object": "inconsistent security standards"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Regulatory weaknesses (A) allow the operation of unfriendly systems that suffer from poor user engagement (B). Low adoption drives users to unauthorized, non-standard tools (Shadow IT), resulting in inconsistent security standards that attackers exploit (C).",
+                    "composed_threat_path_description": "Poorly enforced standards lead to unusable systems that users reject, forcing reliance on unsecure, inconsistent alternatives that compromise the overall security posture.",
+                    "composed_threat_svo": {
+                        "subject": "low system adoption",
+                        "verb": "creates",
+                        "object": "inconsistent security environments"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Regulatory Enforcement Weaknesses",
+                    "svo_representation": {
+                        "subject": "weak enforcement mechanisms",
+                        "verb": "allow",
+                        "object": "non-compliant AI systems to operate"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Poor Information Architecture",
+                    "svo_representation": {
+                        "subject": "poor information architecture",
+                        "verb": "hinders",
+                        "object": "users' ability to access necessary information efficiently"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Weak enforcement (A) permits poor information architecture (B). This structural chaos hinders effective access control management, directly leading to information leakage and unauthorized access (C).",
+                    "composed_threat_path_description": "Lax regulation permits chaotic information structures, making data hard to secure and resulting in unauthorized access and information leakage.",
+                    "composed_threat_svo": {
+                        "subject": "chaotic information architecture",
+                        "verb": "causes",
+                        "object": "unauthorized data leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Regulatory Enforcement Weaknesses",
+                    "svo_representation": {
+                        "subject": "weak enforcement mechanisms",
+                        "verb": "allow",
+                        "object": "non-compliant AI systems to operate"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Design Rigidity and Inflexibility",
+                    "svo_representation": {
+                        "subject": "rigid design processes",
+                        "verb": "hinder",
+                        "object": "iterative improvements and user feedback incorporation"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Vulnerability Exploitation",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "exploit",
+                        "object": "known vulnerabilities"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Regulatory weaknesses (A) allow for rigid design processes (B). This inflexibility prevents the system from adapting to new threats or patching issues, making it a prime target for vulnerability exploitation (C).",
+                    "composed_threat_path_description": "A lack of regulatory pressure allows for rigid, unadaptable systems that cannot evolve to meet new security threats, leading to vulnerability exploitation.",
+                    "composed_threat_svo": {
+                        "subject": "design inflexibility",
+                        "verb": "enables",
+                        "object": "systemic vulnerability exploitation"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Information Security Breaches",
+                    "svo_representation": {
+                        "subject": "failure to secure data and system information",
+                        "verb": "lead to",
+                        "object": "unauthorized access"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration and Stress",
+                    "svo_representation": {
+                        "subject": "poor usability and lack of user involvement",
+                        "verb": "cause",
+                        "object": "user frustration and stress"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The primary threat of information security breaches (A) results in unauthorized access, which creates a chaotic and high-stress environment for users, triggering frustration (B). This emotional state of frustration and stress lowers cognitive defenses, making users more susceptible to manipulation by phishing and spoofing attacks (C).",
+                    "composed_threat_path_description": "An initial information security breach creates widespread user frustration and stress, creating a vulnerable psychological state that attackers exploit via targeted phishing campaigns to steal further sensitive information.",
+                    "composed_threat_svo": {
+                        "subject": "breach-induced user frustration",
+                        "verb": "increases",
+                        "object": "phishing susceptibility"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Information Security Breaches",
+                    "svo_representation": {
+                        "subject": "failure to secure data and system information",
+                        "verb": "lead to",
+                        "object": "unauthorized access"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Negative Emotional Responses and User Frustration",
+                    "svo_representation": {
+                        "subject": "designs that ignore user emotions",
+                        "verb": "cause",
+                        "object": "negative emotional responses and user frustration"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The occurrence of unauthorized access (A) creates significant anxiety and negative emotional responses among users (B). These heightened negative emotions cloud judgment, rendering users prone to deception by phishing and spoofing attacks (C) that prey on fear and urgency.",
+                    "composed_threat_path_description": "Security breaches trigger intense negative emotional responses in users, which attackers leverage through social engineering and phishing to bypass remaining defenses and steal credentials.",
+                    "composed_threat_svo": {
+                        "subject": "negative emotional responses to breaches",
+                        "verb": "facilitate",
+                        "object": "deceptive phishing attacks"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Information Security Breaches",
+                    "svo_representation": {
+                        "subject": "failure to secure data and system information",
+                        "verb": "lead to",
+                        "object": "unauthorized access"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Poor User Engagement",
+                    "svo_representation": {
+                        "subject": "unfriendly systems",
+                        "verb": "cause",
+                        "object": "low user engagement and reduced adoption rates"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "A security breach (A) severely erodes user trust, leading to poor user engagement and abandonment of the compromised system (B). As users disengage from secure, sanctioned tools, they resort to unmonitored alternatives (Shadow IT), resulting in information leakage and unauthorized data access (C).",
+                    "composed_threat_path_description": "The loss of trust following a security breach drives users away from secure systems, causing them to adopt insecure workarounds that directly result in uncontrolled information leakage.",
+                    "composed_threat_svo": {
+                        "subject": "breach-driven loss of engagement",
+                        "verb": "leads to",
+                        "object": "unregulated information leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Information Security Breaches",
+                    "svo_representation": {
+                        "subject": "failure to secure data and system information",
+                        "verb": "lead to",
+                        "object": "unauthorized access"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Integrity and Confidentiality Breaches",
+                    "svo_representation": {
+                        "subject": "unauthorized actors",
+                        "verb": "breach",
+                        "object": "data integrity and confidentiality"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The chaos and system instability associated with unauthorized access (A) lead to user confusion and significantly increased error rates (B). These operational errors, such as misconfiguration or accidental deletion, directly compromise data integrity and confidentiality (C).",
+                    "composed_threat_path_description": "Unauthorized access events disrupt standard operations, causing a spike in user errors that subsequently degrades data integrity and confidentiality.",
+                    "composed_threat_svo": {
+                        "subject": "breach-related operational errors",
+                        "verb": "compromise",
+                        "object": "data integrity and confidentiality"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Information Security Breaches",
+                    "svo_representation": {
+                        "subject": "failure to secure data and system information",
+                        "verb": "lead to",
+                        "object": "unauthorized access"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Reduced Usability",
+                    "svo_representation": {
+                        "subject": "poor user-centered design",
+                        "verb": "results in",
+                        "object": "reduced system usability"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Cyber Threats Impacting Critical Services",
+                    "svo_representation": {
+                        "subject": "cyber threats",
+                        "verb": "impact",
+                        "object": "critical services"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Unauthorized access (A) often triggers reactive security lockdowns or system damage that severely reduces usability (B). This reduction in usability and system availability effectively disrupts the delivery of critical services, amplifying the impact of cyber threats (C).",
+                    "composed_threat_path_description": "A security breach renders systems difficult to use or inaccessible, causing a usability drop that cascades into a broader impact on the availability of critical services.",
+                    "composed_threat_svo": {
+                        "subject": "breach-caused usability degradation",
+                        "verb": "impacts",
+                        "object": "critical service availability"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Human Error",
+                    "svo_representation": {
+                        "subject": "operator mistakes",
+                        "verb": "cause",
+                        "object": "improper use of AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Cyber Threats Impacting Critical Services",
+                    "svo_representation": {
+                        "subject": "cyber threats",
+                        "verb": "impact",
+                        "object": "critical services"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Human Error) leads to improper use of AI systems, which manifests as the increased error rates and safety incidents described in Threat B. These safety incidents and operational errors directly contribute to the impact on and disruption of critical services (Threat C).",
+                    "composed_threat_path_description": "Operator mistakes result in improper AI usage, triggering a spike in error rates and safety incidents that ultimately disrupt critical services.",
+                    "composed_threat_svo": {
+                        "subject": "Operator mistakes",
+                        "verb": "trigger",
+                        "object": "critical service disruptions"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Human Error",
+                    "svo_representation": {
+                        "subject": "operator mistakes",
+                        "verb": "cause",
+                        "object": "improper use of AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Human Error) results in improper system use, which drives the increased error rates identified in Threat B. These operational errors and mishandling of data directly result in the data breaches described in Threat C.",
+                    "composed_threat_path_description": "Improper use of AI systems by operators leads to high error rates, creating vulnerabilities that result in the breach of data and personal information.",
+                    "composed_threat_svo": {
+                        "subject": "Operator errors",
+                        "verb": "facilitate",
+                        "object": "data and personal information breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Human Error",
+                    "svo_representation": {
+                        "subject": "operator mistakes",
+                        "verb": "cause",
+                        "object": "improper use of AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Integrity and Confidentiality Breaches",
+                    "svo_representation": {
+                        "subject": "unauthorized actors",
+                        "verb": "breach",
+                        "object": "data integrity and confidentiality"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "The improper use of systems caused by Threat A leads to the increased error rates in Threat B. These errors, such as accidental modification or deletion, directly constitute the breach of data integrity described in Threat C.",
+                    "composed_threat_path_description": "Operator mistakes lead to systemic error rates which compromise the integrity and reliability of data within the system.",
+                    "composed_threat_svo": {
+                        "subject": "Improper AI use",
+                        "verb": "compromises",
+                        "object": "data integrity"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Human Error",
+                    "svo_representation": {
+                        "subject": "operator mistakes",
+                        "verb": "cause",
+                        "object": "improper use of AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Human Error) causes improper use, resulting in increased error rates (Threat B). These errors, such as misdirected transmissions or accidental exposure, lead directly to the information leakage and unauthorized data access described in Threat C.",
+                    "composed_threat_path_description": "Operator mistakes cause increased operational errors, resulting in the accidental leakage of sensitive information to potential malicious actors.",
+                    "composed_threat_svo": {
+                        "subject": "Operator mistakes",
+                        "verb": "cause",
+                        "object": "sensitive information leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Transparency",
+                    "svo_representation": {
+                        "subject": "opaque AI decision-making processes",
+                        "verb": "hinder",
+                        "object": "understanding and trust in AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Lack of Transparency) creates a system state where users cannot understand internal logic, manifesting as Threat B (Inadequate Feedback Mechanisms) which causes user confusion. This confusion compromises the user's ability to distinguish legitimate communications from deceptive ones, leading to Threat C (Phishing and Spoofing Attacks).",
+                    "composed_threat_path_description": "Opaque AI decision-making deprives users of necessary feedback, creating a state of confusion that phishing attackers exploit to deceive users into divulging sensitive information.",
+                    "composed_threat_svo": {
+                        "subject": "opacity-induced user confusion",
+                        "verb": "facilitates",
+                        "object": "successful phishing exploitation"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Transparency",
+                    "svo_representation": {
+                        "subject": "opaque AI decision-making processes",
+                        "verb": "hinder",
+                        "object": "understanding and trust in AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Lack of Transparency) hinders understanding, directly contributing to Threat B (Inadequate Feedback Mechanisms) which results in user errors. These errors act as a vulnerability vector, facilitating Threat C (Data Breaches) where attackers exploit user mistakes to compromise data.",
+                    "composed_threat_path_description": "The lack of transparency in AI systems leads to inadequate feedback and subsequent user errors, which attackers leverage to breach data confidentiality.",
+                    "composed_threat_svo": {
+                        "subject": "feedback-deficient user errors",
+                        "verb": "enable",
+                        "object": "data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Transparency",
+                    "svo_representation": {
+                        "subject": "opaque AI decision-making processes",
+                        "verb": "hinder",
+                        "object": "understanding and trust in AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Malware and Ransomware Attacks",
+                    "svo_representation": {
+                        "subject": "malware and ransomware",
+                        "verb": "attack",
+                        "object": "data and services"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Lack of Transparency) leaves users confused about system states (Threat B), creating an environment where users may inadvertently trigger or install malicious software, mistaking it for legitimate system processes, thus leading to Threat C (Malware and Ransomware Attacks).",
+                    "composed_threat_path_description": "Users confused by opaque system behaviors are unable to identify malicious anomalies, leading to the inadvertent execution of malware or ransomware.",
+                    "composed_threat_svo": {
+                        "subject": "user confusion",
+                        "verb": "permits",
+                        "object": "malware and ransomware infection"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Transparency",
+                    "svo_representation": {
+                        "subject": "opaque AI decision-making processes",
+                        "verb": "hinder",
+                        "object": "understanding and trust in AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Lack of Transparency) acts as an ineffective design trait that leads to Threat B (Increased Error Rates). These operational errors and safety incidents provide the opening or systemic weakness that results in Threat C (Information Leakage and Unauthorized Data Access).",
+                    "composed_threat_path_description": "Opaque and ineffective AI design causes a spike in user error rates, resulting in the accidental leakage of sensitive information to unauthorized actors.",
+                    "composed_threat_svo": {
+                        "subject": "design-induced operational errors",
+                        "verb": "cause",
+                        "object": "unauthorized information leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Transparency",
+                    "svo_representation": {
+                        "subject": "opaque AI decision-making processes",
+                        "verb": "hinder",
+                        "object": "understanding and trust in AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Cyber Threats Impacting Critical Services",
+                    "svo_representation": {
+                        "subject": "cyber threats",
+                        "verb": "impact",
+                        "object": "critical services"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Lack of Transparency) increases the likelihood of Threat B (Increased Error Rates and Safety Incidents). In critical infrastructure contexts, these safety incidents degrade system resilience, making the system susceptible to Threat C (Cyber Threats Impacting Critical Services).",
+                    "composed_threat_path_description": "The opacity of AI systems drives up error rates and safety incidents, which ultimately compromises the stability required to defend critical services against cyber threats.",
+                    "composed_threat_svo": {
+                        "subject": "transparency-related safety incidents",
+                        "verb": "undermine",
+                        "object": "critical service stability"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Transparency",
+                    "svo_representation": {
+                        "subject": "opaque AI decision-making processes",
+                        "verb": "hinder",
+                        "object": "understanding and trust in AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Reduced Usability",
+                    "svo_representation": {
+                        "subject": "poor user-centered design",
+                        "verb": "results in",
+                        "object": "reduced system usability"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Lack of Transparency) contributes to Threat B (Reduced Usability) by obscuring system logic. The resulting difficulty in using the system increases the probability of human error and security circumvention, leading to Threat C (Data Breaches).",
+                    "composed_threat_path_description": "Opaque decision-making reduces system usability, causing friction that leads users to make security mistakes resulting in data breaches.",
+                    "composed_threat_svo": {
+                        "subject": "poor usability",
+                        "verb": "triggers",
+                        "object": "security data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Transparency",
+                    "svo_representation": {
+                        "subject": "opaque AI decision-making processes",
+                        "verb": "hinder",
+                        "object": "understanding and trust in AI systems"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration and Stress",
+                    "svo_representation": {
+                        "subject": "poor usability and lack of user involvement",
+                        "verb": "cause",
+                        "object": "user frustration and stress"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Threat A (Lack of Transparency) causes Threat B (User Frustration and Stress) due to the user's inability to understand the system. This psychological stress lowers vigilance and cognitive defenses, increasing susceptibility to Threat C (Phishing and Spoofing Attacks).",
+                    "composed_threat_path_description": "The stress and frustration caused by opaque AI systems degrade user vigilance, making them easier targets for phishing and spoofing campaigns.",
+                    "composed_threat_svo": {
+                        "subject": "user frustration",
+                        "verb": "increases",
+                        "object": "phishing susceptibility"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Fragmented Regulatory Oversight",
+                    "svo_representation": {
+                        "subject": "inconsistent application of regulations across jurisdictions",
+                        "verb": "create",
+                        "object": "regulatory gaps"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Conflicting User Requirements and Stakeholder Disagreements",
+                    "svo_representation": {
+                        "subject": "unresolved conflicts between user requirements and stakeholder expectations",
+                        "verb": "cause",
+                        "object": "compromised system features, project delays, and user dissatisfaction"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Inconsistent Security Standards",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "exploit",
+                        "object": "inconsistent security standards"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Fragmented regulatory oversight (A) creates confusion and conflicting requirements between compliance and user needs (B). These unresolved conflicts lead to compromised system features, which manifest as inconsistent security standards that malicious actors exploit (C).",
+                    "composed_threat_path_description": "Inconsistent regulatory application creates deep conflicts in system requirements, resulting in compromised features and inconsistent security standards that attackers actively exploit.",
+                    "composed_threat_svo": {
+                        "subject": "regulatory-driven conflicts",
+                        "verb": "generate",
+                        "object": "exploitable security inconsistencies"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Fragmented Regulatory Oversight",
+                    "svo_representation": {
+                        "subject": "inconsistent application of regulations across jurisdictions",
+                        "verb": "create",
+                        "object": "regulatory gaps"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Design Rigidity and Inflexibility",
+                    "svo_representation": {
+                        "subject": "rigid design processes",
+                        "verb": "hinder",
+                        "object": "iterative improvements and user feedback incorporation"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Vulnerability Exploitation",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "exploit",
+                        "object": "known vulnerabilities"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Regulatory fragmentation (A) enforces rigid compliance processes that hinder iterative design and feedback (B). This lack of adaptability prevents the timely patching of systems, leaving known vulnerabilities open for exploitation by attackers (C).",
+                    "composed_threat_path_description": "Fragmented oversight forces a rigid design process that cannot adapt to new threats, resulting in unpatched vulnerabilities that are subsequently exploited.",
+                    "composed_threat_svo": {
+                        "subject": "compliance-induced rigidity",
+                        "verb": "prevents",
+                        "object": "timely vulnerability remediation"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Fragmented Regulatory Oversight",
+                    "svo_representation": {
+                        "subject": "inconsistent application of regulations across jurisdictions",
+                        "verb": "create",
+                        "object": "regulatory gaps"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Inconsistent regulations (A) force ineffective, compliance-first designs that increase user error rates (B). These frequent user errors directly facilitate unauthorized access and information leakage (C).",
+                    "composed_threat_path_description": "Regulatory complexity leads to ineffective system designs that cause high user error rates, directly resulting in the accidental leakage of sensitive information.",
+                    "composed_threat_svo": {
+                        "subject": "compliance-driven design flaws",
+                        "verb": "facilitate",
+                        "object": "accidental data leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Fragmented Regulatory Oversight",
+                    "svo_representation": {
+                        "subject": "inconsistent application of regulations across jurisdictions",
+                        "verb": "create",
+                        "object": "regulatory gaps"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Technological Misalignment",
+                    "svo_representation": {
+                        "subject": "technological misalignment",
+                        "verb": "results in",
+                        "object": "ineffective solutions and wasted resources"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Inconsistent Security Standards",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "exploit",
+                        "object": "inconsistent security standards"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Fragmented oversight (A) drives technological misalignment as systems struggle to meet varying laws (B). This misalignment results in ineffective solutions that fail to uphold consistent security standards, creating opportunities for exploitation (C).",
+                    "composed_threat_path_description": "Regulatory chaos forces the adoption of misaligned technologies, resulting in ineffective solutions that erode security standards and invite exploitation.",
+                    "composed_threat_svo": {
+                        "subject": "regulatory-forced misalignment",
+                        "verb": "erodes",
+                        "object": "standardized security measures"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Fragmented Regulatory Oversight",
+                    "svo_representation": {
+                        "subject": "inconsistent application of regulations across jurisdictions",
+                        "verb": "create",
+                        "object": "regulatory gaps"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Conflicting User Requirements and Stakeholder Disagreements",
+                    "svo_representation": {
+                        "subject": "unresolved conflicts between user requirements and stakeholder expectations",
+                        "verb": "cause",
+                        "object": "compromised system features, project delays, and user dissatisfaction"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Regulatory gaps (A) lead to unresolved conflicts regarding system requirements (B). The resulting compromised features create weak points that attackers utilize to breach data and personal information (C).",
+                    "composed_threat_path_description": "Conflicts arising from fragmented regulations lead to compromised system features, which weaken defenses and allow attackers to breach sensitive data.",
+                    "composed_threat_svo": {
+                        "subject": "regulatory conflicts",
+                        "verb": "weaken",
+                        "object": "defenses against data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration and Stress",
+                    "svo_representation": {
+                        "subject": "poor usability and lack of user involvement",
+                        "verb": "cause",
+                        "object": "user frustration and stress"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) cause significant user frustration and stress (Threat B). This psychological stress degrades cognitive function and vigilance, making users more prone to errors that facilitate data breaches (Threat C).",
+                    "composed_threat_path_description": "The infringement of privacy rights creates a stressful environment for users, whose reduced cognitive vigilance leads to human errors that allow attackers to breach data.",
+                    "composed_threat_svo": {
+                        "subject": "privacy-induced stress",
+                        "verb": "facilitates",
+                        "object": "breaches via human error"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration and Stress",
+                    "svo_representation": {
+                        "subject": "poor usability and lack of user involvement",
+                        "verb": "cause",
+                        "object": "user frustration and stress"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) lead to user stress (Threat B). Stressed users are less likely to scrutinize incoming communications, increasing susceptibility to phishing attacks (Threat C).",
+                    "composed_threat_path_description": "Privacy violations increase user stress levels, which diminishes scrutiny of deceptive communications, allowing phishing and spoofing attacks to succeed.",
+                    "composed_threat_svo": {
+                        "subject": "privacy-related stress",
+                        "verb": "increases",
+                        "object": "susceptibility to phishing"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration and Stress",
+                    "svo_representation": {
+                        "subject": "poor usability and lack of user involvement",
+                        "verb": "cause",
+                        "object": "user frustration and stress"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Malware and Ransomware Attacks",
+                    "svo_representation": {
+                        "subject": "malware and ransomware",
+                        "verb": "attack",
+                        "object": "data and services"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) induce stress (Threat B), which leads to risky online behaviors such as clicking unverified links, facilitating malware infections (Threat C).",
+                    "composed_threat_path_description": "The stress resulting from privacy infringements leads to careless user behavior, creating opportunities for malware and ransomware to compromise data and services.",
+                    "composed_threat_svo": {
+                        "subject": "stress-induced risky behavior",
+                        "verb": "enables",
+                        "object": "malware infections"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Emotional Disconnect and Negative User Experience",
+                    "svo_representation": {
+                        "subject": "emotional disconnect",
+                        "verb": "causes",
+                        "object": "negative user experience"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) result in a negative user experience (Threat B). This dissatisfaction drives users to bypass secure systems in favor of unmonitored alternatives, leading to information leakage (Threat C).",
+                    "composed_threat_path_description": "A negative user experience caused by privacy issues pushes users towards insecure 'Shadow IT' solutions, resulting in the leakage of sensitive data.",
+                    "composed_threat_svo": {
+                        "subject": "negative user experience",
+                        "verb": "drives users to cause",
+                        "object": "information leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Negative Emotional Responses and User Frustration",
+                    "svo_representation": {
+                        "subject": "designs that ignore user emotions",
+                        "verb": "cause",
+                        "object": "negative emotional responses and user frustration"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) evoke negative emotional responses (Threat B). This emotional turmoil distracts users and lowers defense mechanisms, making them vulnerable to social engineering like phishing (Threat C).",
+                    "composed_threat_path_description": "Emotional distress triggered by privacy violations reduces user vigilance, making them easy targets for phishing and spoofing attacks.",
+                    "composed_threat_svo": {
+                        "subject": "negative emotional response",
+                        "verb": "weakens",
+                        "object": "social engineering defenses"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Conflicting User Requirements and Stakeholder Disagreements",
+                    "svo_representation": {
+                        "subject": "unresolved conflicts between user requirements and stakeholder expectations",
+                        "verb": "cause",
+                        "object": "compromised system features, project delays, and user dissatisfaction"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Vulnerability Exploitation",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "exploit",
+                        "object": "known vulnerabilities"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) create conflicts between user needs and stakeholder goals (Threat B). These unresolved conflicts result in compromised features that introduce vulnerabilities exploited by attackers (Threat C).",
+                    "composed_threat_path_description": "Privacy violations spark requirements conflicts, leading to compromised system features that attackers subsequently exploit.",
+                    "composed_threat_svo": {
+                        "subject": "privacy-driven conflicts",
+                        "verb": "introduce",
+                        "object": "exploitable vulnerabilities"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Conflicting User Requirements and Stakeholder Disagreements",
+                    "svo_representation": {
+                        "subject": "unresolved conflicts between user requirements and stakeholder expectations",
+                        "verb": "cause",
+                        "object": "compromised system features, project delays, and user dissatisfaction"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Inconsistent Security Standards",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "exploit",
+                        "object": "inconsistent security standards"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) lead to conflicts and compromised features (Threat B), which results in inconsistent security standards that are exploited by malicious actors (Threat C).",
+                    "composed_threat_path_description": "Conflicts arising from privacy issues result in compromised features and inconsistent security standards, which malicious actors exploit.",
+                    "composed_threat_svo": {
+                        "subject": "privacy-related compromises",
+                        "verb": "result in",
+                        "object": "inconsistent security standards"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Poor User Engagement",
+                    "svo_representation": {
+                        "subject": "unfriendly systems",
+                        "verb": "cause",
+                        "object": "low user engagement and reduced adoption rates"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) cause users to distrust and disengage from the system (Threat B). Low adoption forces users to use insecure channels, leading to data breaches (Threat C).",
+                    "composed_threat_path_description": "Privacy concerns drive low user engagement, leading to the use of insecure workarounds that facilitate data breaches.",
+                    "composed_threat_svo": {
+                        "subject": "privacy-driven disengagement",
+                        "verb": "facilitates",
+                        "object": "data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Poor User Engagement",
+                    "svo_representation": {
+                        "subject": "unfriendly systems",
+                        "verb": "cause",
+                        "object": "low user engagement and reduced adoption rates"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) lead to poor engagement (Threat B). The resulting lack of adoption of secure tools means data flows through unauthorized channels, causing information leakage (Threat C).",
+                    "composed_threat_path_description": "Fear of privacy violations reduces adoption of secure tools, pushing data into unauthorized channels where information leakage occurs.",
+                    "composed_threat_svo": {
+                        "subject": "low system adoption",
+                        "verb": "causes",
+                        "object": "unauthorized information leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Violation",
+                    "svo_representation": {
+                        "subject": "improper handling of personal and biometric data",
+                        "verb": "infringe",
+                        "object": "individuals' privacy rights"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Poor User Engagement",
+                    "svo_representation": {
+                        "subject": "unfriendly systems",
+                        "verb": "cause",
+                        "object": "low user engagement and reduced adoption rates"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Inconsistent Security Standards",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "exploit",
+                        "object": "inconsistent security standards"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Privacy violations (Threat A) result in poor engagement (Threat B), leading to a fragmented IT environment with inconsistent security standards (Threat C).",
+                    "composed_threat_path_description": "Privacy-induced low adoption leads to a fragmented toolset across the organization, creating inconsistent security standards that can be exploited.",
+                    "composed_threat_svo": {
+                        "subject": "poor user engagement",
+                        "verb": "fosters",
+                        "object": "inconsistent security standards"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Infringement caused by Surveillance",
+                    "svo_representation": {
+                        "subject": "Surveillance",
+                        "verb": "causes",
+                        "object": "Privacy Infringement"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "User Frustration due to poor usability and lack of user involvement",
+                    "svo_representation": {
+                        "subject": "Poor usability and lack of user involvement",
+                        "verb": "causes",
+                        "object": "User Frustration"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Decreased User Trust resulting from User Frustration",
+                    "svo_representation": {
+                        "subject": "User Frustration",
+                        "verb": "leads to",
+                        "object": "Decreased User Trust"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Surveillance leads to Privacy Infringement, which causes poor usability and lack of user involvement, resulting in User Frustration, and subsequently leading to Decreased User Trust.",
+                    "composed_threat_path_description": "Surveillance → Privacy Infringement → User Frustration → Decreased User Trust",
+                    "composed_threat_svo": {
+                        "subject": "Surveillance",
+                        "verb": "causes",
+                        "object": "Decreased User Trust"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Privacy Infringement caused by Surveillance",
+                    "svo_representation": {
+                        "subject": "Surveillance",
+                        "verb": "causes",
+                        "object": "Privacy Infringement"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates caused by high-pressure surveillance conditions",
+                    "svo_representation": {
+                        "subject": "High-pressure Surveillance",
+                        "verb": "causes",
+                        "object": "Increased Error Rates"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Operational Failures resulting from Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "Increased Error Rates",
+                        "verb": "cause",
+                        "object": "Operational Failures"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Surveillance leads to Privacy Infringement and associated pressure, which causes Increased Error Rates, resulting in Operational Failures.",
+                    "composed_threat_path_description": "Surveillance → Privacy Infringement → Increased Error Rates → Operational Failures",
+                    "composed_threat_svo": {
+                        "subject": "Surveillance",
+                        "verb": "causes",
+                        "object": "Operational Failures"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) allows the deployment of systems with Inadequate Feedback Mechanisms (B). These mechanisms cause user confusion and errors, which creates opportunities for Attackers to successfully breach data (C) due to human error.",
+                    "composed_threat_path_description": "Regulatory negligence permits opaque system feedback, leading to user confusion that attackers exploit to execute data breaches.",
+                    "composed_threat_svo": {
+                        "subject": "Regulatory negligence",
+                        "verb": "facilitates",
+                        "object": "user-error driven data breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Phishing and Spoofing Attacks",
+                    "svo_representation": {
+                        "subject": "phishing and spoofing attackers",
+                        "verb": "steal",
+                        "object": "sensitive information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) permits systems with Inadequate Feedback Mechanisms (B). The resulting user confusion increases susceptibility to deception, allowing Phishing attackers to successfully steal sensitive information (C).",
+                    "composed_threat_path_description": "Unaccountable design practices result in user confusion, drastically increasing the success rate of phishing and spoofing attacks.",
+                    "composed_threat_svo": {
+                        "subject": "Systemic user confusion",
+                        "verb": "increases",
+                        "object": "susceptibility to phishing attacks"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Feedback Mechanisms",
+                    "svo_representation": {
+                        "subject": "inadequate feedback mechanisms",
+                        "verb": "cause",
+                        "object": "user confusion and errors"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) enables Inadequate Feedback Mechanisms (B), causing user errors. These errors lead to unintentional Information Leakage and Unauthorized Data Access (C) by malicious actors.",
+                    "composed_threat_path_description": "The absence of accountability leads to poor feedback systems, causing user errors that result in accidental information leakage.",
+                    "composed_threat_svo": {
+                        "subject": "Opaque system feedback",
+                        "verb": "results in",
+                        "object": "accidental data leakage"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Cyber Threats Impacting Critical Services",
+                    "svo_representation": {
+                        "subject": "cyber threats",
+                        "verb": "impact",
+                        "object": "critical services"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) allows Ineffective Design (B), which causes Increased Error Rates and safety incidents. These incidents disrupt operations, allowing Cyber Threats to Impact Critical Services (C).",
+                    "composed_threat_path_description": "Unchecked ineffective design leads to safety incidents and operational errors that expose critical services to significant cyber impact.",
+                    "composed_threat_svo": {
+                        "subject": "Unregulated design flaws",
+                        "verb": "expose",
+                        "object": "critical services to disruption"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) leads to Ineffective Design (B) and high error rates. These operational errors weaken defenses, allowing attackers to cause Data Breaches (C).",
+                    "composed_threat_path_description": "Lack of oversight permits design flaws that increase error rates, creating openings for attackers to breach data systems.",
+                    "composed_threat_svo": {
+                        "subject": "Design-induced errors",
+                        "verb": "facilitate",
+                        "object": "security breaches"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Increased Error Rates",
+                    "svo_representation": {
+                        "subject": "ineffective design",
+                        "verb": "causes",
+                        "object": "increased error rates and safety incidents"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Integrity and Confidentiality Breaches",
+                    "svo_representation": {
+                        "subject": "unauthorized actors",
+                        "verb": "breach",
+                        "object": "data integrity and confidentiality"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) results in Ineffective Design (B). The consequent errors and safety incidents compromise system states, allowing unauthorized actors to Breach Data Integrity and Confidentiality (C).",
+                    "composed_threat_path_description": "Accountability failures lead to error-prone designs that compromise data integrity and confidentiality.",
+                    "composed_threat_svo": {
+                        "subject": "Operational safety incidents",
+                        "verb": "compromise",
+                        "object": "data integrity"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Conflicting User Requirements and Stakeholder Disagreements",
+                    "svo_representation": {
+                        "subject": "unresolved conflicts between user requirements and stakeholder expectations",
+                        "verb": "cause",
+                        "object": "compromised system features, project delays, and user dissatisfaction"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Inconsistent Security Standards",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "exploit",
+                        "object": "inconsistent security standards"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) allows Unresolved Conflicts between requirements (B). This results in compromised features, creating Inconsistent Security Standards that malicious actors exploit (C).",
+                    "composed_threat_path_description": "Governance failures leave requirement conflicts unresolved, resulting in compromised features and inconsistent security standards that are easily exploited.",
+                    "composed_threat_svo": {
+                        "subject": "Unresolved requirements conflicts",
+                        "verb": "create",
+                        "object": "exploitable security inconsistencies"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Lack of Iterative Design and Feedback Integration",
+                    "svo_representation": {
+                        "subject": "non-iterative design processes that ignore user feedback",
+                        "verb": "result in",
+                        "object": "rigid systems that do not adapt to evolving user needs"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Vulnerability Exploitation",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "exploit",
+                        "object": "known vulnerabilities"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) permits Non-iterative Design Processes (B). This results in rigid systems that do not adapt, leaving Known Vulnerabilities exposed for attackers to exploit (C).",
+                    "composed_threat_path_description": "The lack of accountability fosters non-iterative design, leaving systems unable to patch known vulnerabilities which attackers then exploit.",
+                    "composed_threat_svo": {
+                        "subject": "Non-iterative development",
+                        "verb": "leaves",
+                        "object": "vulnerabilities exposed to exploitation"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Design Rigidity and Inflexibility",
+                    "svo_representation": {
+                        "subject": "rigid design processes",
+                        "verb": "hinder",
+                        "object": "iterative improvements and user feedback incorporation"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Vulnerability Exploitation",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "exploit",
+                        "object": "known vulnerabilities"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) enables Design Rigidity (B). This hinders improvements and updates, preventing the remediation of vulnerabilities which attackers then exploit (C).",
+                    "composed_threat_path_description": "Rigid design processes, unchecked by accountability, prevent necessary updates, allowing attackers to exploit persistent vulnerabilities.",
+                    "composed_threat_svo": {
+                        "subject": "Rigid governance",
+                        "verb": "enables",
+                        "object": "exploitation of unpatched vulnerabilities"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Training and Support",
+                    "svo_representation": {
+                        "subject": "inadequate training and support",
+                        "verb": "prevent",
+                        "object": "users from effectively utilizing system functionalities"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Data Breaches",
+                    "svo_representation": {
+                        "subject": "attackers",
+                        "verb": "breach",
+                        "object": "data and personal information"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) leads to Inadequate Training and Support (B). Users failing to utilize functionalities effectively commit errors that result in Data Breaches (C).",
+                    "composed_threat_path_description": "Insufficient training due to lack of oversight causes user misuse, creating security gaps that lead to data breaches.",
+                    "composed_threat_svo": {
+                        "subject": "Inadequate training",
+                        "verb": "precipitates",
+                        "object": "breaches via user misuse"
+                    }
+                }
+            },
+            {
+                "threat_A_details": {
+                    "original_threat": "Lack of Accountability",
+                    "svo_representation": {
+                        "subject": "insufficient mechanisms to hold providers and operators accountable",
+                        "verb": "allow",
+                        "object": "AI system abuses and non-compliance with regulations"
+                    }
+                },
+                "threat_B_details": {
+                    "original_threat": "Inadequate Training and Support",
+                    "svo_representation": {
+                        "subject": "inadequate training and support",
+                        "verb": "prevent",
+                        "object": "users from effectively utilizing system functionalities"
+                    }
+                },
+                "threat_C_details": {
+                    "original_threat": "Information Leakage and Unauthorized Data Access",
+                    "svo_representation": {
+                        "subject": "malicious actors",
+                        "verb": "access",
+                        "object": "sensitive data"
+                    }
+                },
+                "composition_details": {
+                    "causal_chain_description": "Lack of Accountability (A) results in Inadequate Training (B). Users unable to use the system securely inadvertently allow Malicious Actors to Access Sensitive Data (C).",
+                    "composed_threat_path_description": "Poor training and support leave users unable to protect data, resulting in information leakage and unauthorized access.",
+                    "composed_threat_svo": {
+                        "subject": "Untrained user behavior",
+                        "verb": "enables",
+                        "object": "unauthorized data access"
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,753 @@
+{
+  "name": "Compositionality 3 context, Oracolo 2",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -48,
+        768
+      ],
+      "id": "d55e5116-7524-4c59-a851-f1c1022e7222",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/simone989/SOP_SCAI_D4_UNICT/refs/heads/main/results/ISO-9241-210/threat.json",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        768
+      ],
+      "id": "d8a1a172-72c4-40d1-b20c-a3720a7bf493",
+      "name": "HTTP Request ISO 9241-210"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/simone989/SOP_SCAI_D4_UNICT/refs/heads/main/results/Ai_Act/threat.json",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        368
+      ],
+      "id": "696b5de1-8a53-4c23-a31e-06a3533bbd77",
+      "name": "HTTP Request AI ACT"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/simone989/SOP_SCAI_D4_UNICT/refs/heads/main/results/NIS_2/threat.json",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        1168
+      ],
+      "id": "339f3616-dd59-42f4-97e6-06b66cbb1e81",
+      "name": "HTTP Request NIS 2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "089f20df-e07b-4c03-af63-d60137991903",
+              "name": "output_iso",
+              "value": "={{ $json.output }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        720,
+        768
+      ],
+      "id": "b3ccd3a4-1bcf-4894-8f1b-64ffe947b0cb",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5cf298f9-fba5-4a43-80dc-b741d113701b",
+              "name": "output_ai_act",
+              "value": "={{ $json.output }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        720,
+        368
+      ],
+      "id": "a0c54426-d1e9-4af1-8b86-7faec784a505",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.results[0].threats }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "### ROLE & CONTEXT\n\nYou are an expert agent specializing in cybersecurity threat analysis and Natural Language Processing (NLP). Your primary function is to decompose complex threat descriptions into structured linguistic formats.\n\n### TASK\n\nYour task is to analyze the provided JSON input, which contains a list of threats. For each threat object, you must perform the following actions using clear, instructional verbs:\n\n1.  **Extract** the original threat object.\n2.  **Decompose** its threat into a **SVO (Subject-Verb-Object)** representation, identifying the core actor (Subject), the action (Verb), and the target (Object).\n3.  **Return** a single JSON object containing the complete analysis. You must precisely follow the output structure shown in the few-shot example below.\n\n**IMPORTANT:** Do NOT generate SAVO (Subject-Attribute-Verb-Object) representations. Output ONLY the SVO format.\n\n### EXAMPLE (FEW-SHOT)\n\nThis example uses a threat described in the \"Methodology\" document to demonstrate the expected transformation.\n\n**Example Input JSON:**\n\n```json\n{\n    \"results\": [\n        {\n            \"threats\": [\n                {\n                    \"threat\": \"AI-driven Surveillance Infringement\"\n                }\n            ]\n        }\n    ]\n}\n```\n\n**OUTPUT:**\n\n```json\n{\n    \"threat_analysis\": [\n        {\n            \"original_threat\": {\n                \"threat\": \"AI-driven Surveillance Infringement\"\n            },\n            \"svo_representation\": {\n                \"subject\": \"AI-driven surveillance systems\",\n                \"verb\": \"infringe\",\n                \"object\": \"individuals' privacy rights\"\n            }\n        }\n    ]\n}\n```\n\n### YOUR TASK\nNow, apply the same logic and structure to the JSON input below.\nCRITICAL OUTPUT RULES:\n1. Return ONLY the raw JSON object.\n2. Do NOT use Markdown formatting (no ```json or ``` backticks).\n3. Do NOT include any conversational text."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        448,
+        768
+      ],
+      "id": "c169e5ae-4e59-40d8-ac48-d5c2ad2e421c",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "o4-mini",
+          "mode": "list",
+          "cachedResultName": "o4-mini"
+        },
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        448,
+        960
+      ],
+      "id": "0a0e2c59-7ce3-487e-93ca-7fc858baf299",
+      "name": "OpenAI Chat Model4",
+      "credentials": {
+        "openAiApi": {
+          "id": "fF5RxseBBaYV8hV5",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.results[0].threats }}",
+        "options": {
+          "systemMessage": "### ROLE & CONTEXT\n\nYou are an expert agent specializing in cybersecurity threat analysis and Natural Language Processing (NLP). Your primary function is to decompose complex threat descriptions into structured linguistic formats.\n\n### TASK\n\nYour task is to analyze the provided JSON input, which contains a list of threats. For each threat object, you must perform the following actions using clear, instructional verbs:\n\n1.  **Extract** the original threat object.\n2.  **Decompose** its threat into a **SVO (Subject-Verb-Object)** representation, identifying the core actor (Subject), the action (Verb), and the target (Object).\n3.  **Return** a single JSON object containing the complete analysis. You must precisely follow the output structure shown in the few-shot example below.\n\n**IMPORTANT:** Do NOT generate SAVO (Subject-Attribute-Verb-Object) representations. Output ONLY the SVO format.\n\n### EXAMPLE (FEW-SHOT)\n\nThis example uses a threat described in the \"Methodology\" document to demonstrate the expected transformation.\n\n**Example Input JSON:**\n\n```json\n{\n    \"results\": [\n        {\n            \"threats\": [\n                {\n                    \"threat\": \"AI-driven Surveillance Infringement\"\n                }\n            ]\n        }\n    ]\n}\n```\n\n**OUTPUT:**\n\n```json\n{\n    \"threat_analysis\": [\n        {\n            \"original_threat\": {\n                \"threat\": \"AI-driven Surveillance Infringement\"\n            },\n            \"svo_representation\": {\n                \"subject\": \"AI-driven surveillance systems\",\n                \"verb\": \"infringe\",\n                \"object\": \"individuals' privacy rights\"\n            }\n        }\n    ]\n}\n```\n\n### YOUR TASK\nNow, apply the same logic and structure to the JSON input below.\nCRITICAL OUTPUT RULES:\n1. Return ONLY the raw JSON object.\n2. Do NOT use Markdown formatting (no ```json or ``` backticks).\n3. Do NOT include any conversational text."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        448,
+        368
+      ],
+      "id": "d340d1b6-a09b-404f-8791-61fead52344b",
+      "name": "AI Agent1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "o4-mini",
+          "mode": "list",
+          "cachedResultName": "o4-mini"
+        },
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        448,
+        560
+      ],
+      "id": "623ce9e8-3d19-42ab-b2a7-b109f05c50f1",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "fF5RxseBBaYV8hV5",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.results[0].threats }}",
+        "options": {
+          "systemMessage": "### ROLE & CONTEXT\n\nYou are an expert agent specializing in cybersecurity threat analysis and Natural Language Processing (NLP). Your primary function is to decompose complex threat descriptions into structured linguistic formats.\n\n### TASK\n\nYour task is to analyze the provided JSON input, which contains a list of threats. For each threat object, you must perform the following actions using clear, instructional verbs:\n\n1.  **Extract** the original threat object.\n2.  **Decompose** its threat into a **SVO (Subject-Verb-Object)** representation, identifying the core actor (Subject), the action (Verb), and the target (Object).\n3.  **Return** a single JSON object containing the complete analysis. You must precisely follow the output structure shown in the few-shot example below.\n\n**IMPORTANT:** Do NOT generate SAVO (Subject-Attribute-Verb-Object) representations. Output ONLY the SVO format.\n\n### EXAMPLE (FEW-SHOT)\n\nThis example uses a threat described in the \"Methodology\" document to demonstrate the expected transformation.\n\n**Example Input JSON:**\n\n```json\n{\n    \"results\": [\n        {\n            \"threats\": [\n                {\n                    \"threat\": \"AI-driven Surveillance Infringement\"\n                }\n            ]\n        }\n    ]\n}\n```\n\n**OUTPUT:**\n\n```json\n{\n    \"threat_analysis\": [\n        {\n            \"original_threat\": {\n                \"threat\": \"AI-driven Surveillance Infringement\"\n            },\n            \"svo_representation\": {\n                \"subject\": \"AI-driven surveillance systems\",\n                \"verb\": \"infringe\",\n                \"object\": \"individuals' privacy rights\"\n            }\n        }\n    ]\n}\n```\n\n### YOUR TASK\nNow, apply the same logic and structure to the JSON input below.\nCRITICAL OUTPUT RULES:\n1. Return ONLY the raw JSON object.\n2. Do NOT use Markdown formatting (no ```json or ``` backticks).\n3. Do NOT include any conversational text."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        448,
+        1168
+      ],
+      "id": "b5314f1c-611c-48b9-91ac-a79de2d5d942",
+      "name": "AI Agent3"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        448,
+        1328
+      ],
+      "id": "3eb15314-fa38-4326-b864-8c53c27211c3",
+      "name": "OpenAI Chat Model3",
+      "credentials": {
+        "openAiApi": {
+          "id": "fF5RxseBBaYV8hV5",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combineBySql",
+        "numberInputs": 3,
+        "query": "SELECT * FROM input1;\nSELECT * FROM input2;\nSELECT * FROM input3;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1536,
+        752
+      ],
+      "id": "0b7305e1-51fc-4d07-a0e1-b906f4736d15",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "089f20df-e07b-4c03-af63-d60137991903",
+              "name": "output_nis_2",
+              "value": "={{ $json.output }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        752,
+        1168
+      ],
+      "id": "95ff54f7-3b71-4255-b933-c82e7f3320a6",
+      "name": "Edit Fields NIS"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://172.18.0.1:9090/filter_oracol_1",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "context",
+              "value": "ai_act"
+            },
+            {
+              "name": "=threat",
+              "value": "={{ $json.output_ai_act.threat_analysis }}"
+            },
+            {
+              "name": "top_k",
+              "value": "10"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        928,
+        368
+      ],
+      "id": "01a599b7-766e-48e2-939c-1c0ee18e83d5",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://172.18.0.1:9090/filter_oracol_1",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "=threat",
+              "value": "={{ $json.output_iso.threat_analysis }}"
+            },
+            {
+              "name": "top_k",
+              "value": "10"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        928,
+        768
+      ],
+      "id": "c9f28aae-d1ba-450c-8ef6-6727f7d21a7e",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://172.18.0.1:9090/merge_filter_oracol_1",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "lemmatize_subjects",
+              "value": "true"
+            },
+            {
+              "name": "iterations",
+              "value": "={{(()=>{\n  const result = [];\n  result.push($('Edit Fields4').all()[0].json.output_ai_act)\n  result.push($('Edit Fields5').all()[0].json.output_iso)\n  result.push($('Edit Fields6').all()[0].json.output_nis_2)\n\n  return result;\n //return JSON.stringify(result);\n})()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1760,
+        768
+      ],
+      "id": "5f40ffe2-648c-47af-87f1-3d9896b4f534",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://172.18.0.1:9090/filter_oracol_1",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "=threat",
+              "value": "={{ $json.output_nis_2.threat_analysis }}"
+            },
+            {
+              "name": "top_k",
+              "value": "10"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        928,
+        1168
+      ],
+      "id": "20575bf3-1fc0-4502-9e5e-ccbf8415684d",
+      "name": "HTTP Request3"
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1984,
+        768
+      ],
+      "id": "d1abbed0-5d43-49e4-b70d-6b319eb5244c",
+      "name": "Convert to File1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8dd22b9b-0009-4129-8a34-bd16cf9447aa",
+              "name": "output_ai_act",
+              "value": "={{ $json }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1136,
+        368
+      ],
+      "id": "b8d7aa39-db65-4bb0-b3d3-b8b5077a09d9",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8dd22b9b-0009-4129-8a34-bd16cf9447aa",
+              "name": "output_iso",
+              "value": "={{ $json }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1136,
+        768
+      ],
+      "id": "f61d99c4-656b-4e93-afee-067c62de9186",
+      "name": "Edit Fields5"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8dd22b9b-0009-4129-8a34-bd16cf9447aa",
+              "name": "output_nis_2",
+              "value": "={{ $json }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1120,
+        1168
+      ],
+      "id": "4ff693c3-caac-4d27-a13d-356f5c972bf1",
+      "name": "Edit Fields6"
+    }
+  ],
+  "pinData": {
+    "When clicking ‘Execute workflow’": [
+      {
+        "json": {}
+      }
+    ]
+  },
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request AI ACT",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request NIS 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request ISO 9241-210",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request ISO 9241-210": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request AI ACT": {
+      "main": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request NIS 2": {
+      "main": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent3": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields NIS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields NIS": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Convert to File1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields6": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "23e5d478-23a2-4f00-8090-33179494a630",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a61c38f2c6d710a341dd5706e3360191d21111126ff9c319e6ebd6005bf5e5b3"
+  },
+  "id": "f2DCtjU45V1XwlH1",
+  "tags": []
+}

@@ -1,0 +1,973 @@
+{
+  "name": "Compositionality 3 context, Oracolo 1",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -48,
+        768
+      ],
+      "id": "cdc247bd-5515-4ab6-95ea-4728907d0378",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/simone989/SOP_SCAI_D4_UNICT/refs/heads/main/results/ISO-9241-210/threat.json",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        768
+      ],
+      "id": "1e298bf9-b9e4-4f64-87b2-9f4f8d15e298",
+      "name": "HTTP Request ISO 9241-210"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/simone989/SOP_SCAI_D4_UNICT/refs/heads/main/results/Ai_Act/threat.json",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        368
+      ],
+      "id": "7bf0fbcf-6ca3-45c5-9828-749df9d52c17",
+      "name": "HTTP Request AI ACT"
+    },
+    {
+      "parameters": {
+        "url": "https://raw.githubusercontent.com/simone989/SOP_SCAI_D4_UNICT/refs/heads/main/results/NIS_2/threat.json",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        176,
+        1168
+      ],
+      "id": "5b8870f7-1b0a-4cb4-aca8-1522ddde2f6a",
+      "name": "HTTP Request NIS 2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "089f20df-e07b-4c03-af63-d60137991903",
+              "name": "output_iso",
+              "value": "={{ $json.output }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        896,
+        768
+      ],
+      "id": "38251dc4-45a1-4c4d-a34a-28593f792ebe",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5cf298f9-fba5-4a43-80dc-b741d113701b",
+              "name": "output_ai_act",
+              "value": "={{ $json.output }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        896,
+        368
+      ],
+      "id": "db9eb411-05b1-4056-8706-a364168d1d6d",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.filtered_threats }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "### ROLE & CONTEXT\n\nYou are an expert agent specializing in cybersecurity threat analysis and Natural Language Processing (NLP). Your primary function is to decompose complex threat descriptions into structured linguistic formats.\n\n### TASK\n\nYour task is to analyze the provided JSON input, which contains a list of threats. For each threat object, you must perform the following actions using clear, instructional verbs:\n\n1.  **Extract** the original threat object.\n2.  **Decompose** its threat into a **SVO (Subject-Verb-Object)** representation, identifying the core actor (Subject), the action (Verb), and the target (Object).\n3.  **Return** a single JSON object containing the complete analysis. You must precisely follow the output structure shown in the few-shot example below.\n\n**IMPORTANT:** Do NOT generate SAVO (Subject-Attribute-Verb-Object) representations. Output ONLY the SVO format.\n\n### EXAMPLE (FEW-SHOT)\n\nThis example uses a threat described in the \"Methodology\" document to demonstrate the expected transformation.\n\n**Example Input JSON:**\n\n```json\n{\n    \"results\": [\n        {\n            \"threats\": [\n                {\n                    \"threat\": \"AI-driven Surveillance Infringement\"\n                }\n            ]\n        }\n    ]\n}\n```\n\n**OUTPUT:**\n\n```json\n{\n    \"threat_analysis\": [\n        {\n            \"original_threat\": {\n                \"threat\": \"AI-driven Surveillance Infringement\"\n            },\n            \"svo_representation\": {\n                \"subject\": \"AI-driven surveillance systems\",\n                \"verb\": \"infringe\",\n                \"object\": \"individuals' privacy rights\"\n            }\n        }\n    ]\n}\n```\n\n### YOUR TASK\nNow, apply the same logic and structure to the JSON input below.\nCRITICAL OUTPUT RULES:\n1. Return ONLY the raw JSON object.\n2. Do NOT use Markdown formatting (no ```json or ``` backticks).\n3. Do NOT include any conversational text."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        624,
+        768
+      ],
+      "id": "5837209f-1a26-4577-ad06-529bf6747715",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "o4-mini",
+          "mode": "list",
+          "cachedResultName": "o4-mini"
+        },
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        624,
+        960
+      ],
+      "id": "75641ec5-88cb-499f-b775-da461d99f083",
+      "name": "OpenAI Chat Model4",
+      "credentials": {
+        "openAiApi": {
+          "id": "fF5RxseBBaYV8hV5",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.filtered_threats }}",
+        "options": {
+          "systemMessage": "### ROLE & CONTEXT\n\nYou are an expert agent specializing in cybersecurity threat analysis and Natural Language Processing (NLP). Your primary function is to decompose complex threat descriptions into structured linguistic formats.\n\n### TASK\n\nYour task is to analyze the provided JSON input, which contains a list of threats. For each threat object, you must perform the following actions using clear, instructional verbs:\n\n1.  **Extract** the original threat object.\n2.  **Decompose** its threat into a **SVO (Subject-Verb-Object)** representation, identifying the core actor (Subject), the action (Verb), and the target (Object).\n3.  **Return** a single JSON object containing the complete analysis. You must precisely follow the output structure shown in the few-shot example below.\n\n**IMPORTANT:** Do NOT generate SAVO (Subject-Attribute-Verb-Object) representations. Output ONLY the SVO format.\n\n### EXAMPLE (FEW-SHOT)\n\nThis example uses a threat described in the \"Methodology\" document to demonstrate the expected transformation.\n\n**Example Input JSON:**\n\n```json\n{\n    \"results\": [\n        {\n            \"threats\": [\n                {\n                    \"threat\": \"AI-driven Surveillance Infringement\"\n                }\n            ]\n        }\n    ]\n}\n```\n\n**OUTPUT:**\n\n```json\n{\n    \"threat_analysis\": [\n        {\n            \"original_threat\": {\n                \"threat\": \"AI-driven Surveillance Infringement\"\n            },\n            \"svo_representation\": {\n                \"subject\": \"AI-driven surveillance systems\",\n                \"verb\": \"infringe\",\n                \"object\": \"individuals' privacy rights\"\n            }\n        }\n    ]\n}\n```\n\n### YOUR TASK\nNow, apply the same logic and structure to the JSON input below.\nCRITICAL OUTPUT RULES:\n1. Return ONLY the raw JSON object.\n2. Do NOT use Markdown formatting (no ```json or ``` backticks).\n3. Do NOT include any conversational text."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        624,
+        368
+      ],
+      "id": "998c0af4-86a0-4ece-a587-287028e4c60e",
+      "name": "AI Agent1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "o4-mini",
+          "mode": "list",
+          "cachedResultName": "o4-mini"
+        },
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        624,
+        560
+      ],
+      "id": "ee14fdd6-8c92-4d9c-b56b-f70b805a626b",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "fF5RxseBBaYV8hV5",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=\n------------\n\nPrimary_threat_A:\n{{ JSON.stringify($input.item.json) }}\n\nThreat_list_B:\n{{ JSON.stringify($('Merge').all()[1].json.output_iso.threat_analysis,0,5) }}\n\nThreat_list_C:\n{{ JSON.stringify($('Merge').all()[2].json.output_nis_2.threat_analysis,0,5) }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are an expert cybersecurity analyst running an automated threat analysis script. Your task is to perform an exhaustive analysis of a specific threat scenario involving three distinct contexts. You must identify ALL possible **multi-stage heterologous compositions** (chains of threats).\n\n**The Input Structure:**\nYou will receive:\n\n1.  `primary_threat_A`: A single threat object (The root cause/trigger).\n2.  `threat_list_B`: A list of potential intermediate threats.\n3.  `threat_list_C`: A list of potential final impact threats.\n\n**The Logic (1 x N x M):**\nYou must compare the single `primary_threat_A` against EVERY item in `threat_list_B`, and for every valid connection found, compare that item from B against EVERY item in `threat_list_C`.\nThe goal is to find valid causal chains: **Threat A $\\to$ Threat B $\\to$ Threat C**.\n\n**CRITICAL REQUIREMENT:** The analysis must be absolutely complete. It is strictly forbidden to truncate, summarize, or provide a partial output. You **MUST** return the complete list of ALL valid chain compositions found. Completeness is mandatory for the downstream automated system.\n\n### CONTEXT\n\nA **Multi-stage Heterologous Composition** links threats across three domains through a causal chain. A valid composition exists ONLY if:\n\n1.  The **outcome/object** of Threat A plausibly causes, triggers, or contributes to Threat B.\n2.  **AND** the **outcome/object** of that specific Threat B plausibly causes, triggers, or contributes to Threat C.\n\n### TASK\n\n1.  Analyze the provided JSON object containing `primary_threat_A`, `threat_list_B`, and `threat_list_C`.\n2.  Perform the exhaustive check (A $\\to$ B $\\to$ C).\n3.  Your final output must be a single JSON object containing the **COMPLETE** list named `valid_compositions`.\n4.  For each valid chain found, you must synthesize a new, single sentence summarizing the entire path (A through C) and generate a **new SVO representation** for this combined scenario.\n5.  Do **NOT** include SAVO representations in the output. Use only SVO.\n\n### OUTPUT FORMAT\n\nEach entry in the `valid_compositions` list must be an object with the following structure:\n\n  * `threat_A_details`: Details of the single primary threat (Original Name + SVO).\n  * `threat_B_details`: Details of the intermediate threat from List B (Original Name + SVO).\n  * `threat_C_details`: Details of the final threat from List C (Original Name + SVO).\n  * `composition_details`:\n      * `causal_chain_description`: A clear explanation of the link: *How A causes B, and how B causes C*.\n      * `composed_threat_path_description`: A narrative description of the full scenario.\n      * `composed_threat_svo`: The **newly synthesized SVO** for the complete A $\\to$ B $\\to$ C chain.\n\n-----\n\n### EXAMPLE\n\n**INPUT:**\n\n```json\n{\n  \"primary_threat_A\": {\n    \"original_threat\": \"AI-driven Surveillance\",\n    \"svo_representation\": { \"subject\": \"AI surveillance\", \"verb\": \"infringes\", \"object\": \"privacy rights\" }\n  },\n  \"threat_list_B\": [\n    {\n      \"original_threat\": \"Data Leaks\",\n      \"svo_representation\": { \"subject\": \"Weak security\", \"verb\": \"exposes\", \"object\": \"sensitive data\" }\n    },\n    {\n      \"original_threat\": \"Psychological Stress\",\n      \"svo_representation\": { \"subject\": \"Privacy violations\", \"verb\": \"cause\", \"object\": \"chronic user anxiety\" }\n    }\n  ],\n  \"threat_list_C\": [\n    {\n      \"original_threat\": \"Workplace Burnout\",\n      \"svo_representation\": { \"subject\": \"Chronic anxiety\", \"verb\": \"leads to\", \"object\": \"employee burnout\" }\n    }\n  ]\n}\n```\n\n**OUTPUT:**\n\n```json\n{\n    \"valid_compositions\": [\n        {\n            \"threat_A_details\": {\n                \"original_threat\": \"AI-driven Surveillance\",\n                \"svo_representation\": { \"subject\": \"AI surveillance\", \"verb\": \"infringes\", \"object\": \"privacy rights\" }\n            },\n            \"threat_B_details\": {\n                \"original_threat\": \"Psychological Stress\",\n                \"svo_representation\": { \"subject\": \"Privacy violations\", \"verb\": \"cause\", \"object\": \"chronic user anxiety\" }\n            },\n            \"threat_C_details\": {\n                \"original_threat\": \"Workplace Burnout\",\n                \"svo_representation\": { \"subject\": \"Chronic anxiety\", \"verb\": \"leads to\", \"object\": \"employee burnout\" }\n            },\n            \"composition_details\": {\n                \"causal_chain_description\": \"Threat A (Surveillance) directly results in privacy violations, which is the subject of Threat B. The outcome of Threat B (Chronic anxiety) is the direct precursor and cause of Threat C (Employee burnout).\",\n                \"composed_threat_path_description\": \"Intrusive AI surveillance erodes privacy, triggering chronic anxiety which ultimately escalates into severe workplace burnout.\",\n                \"composed_threat_svo\": {\n                    \"subject\": \"Surveillance-induced anxiety\",\n                    \"verb\": \"triggers\",\n                    \"object\": \"systemic workforce burnout\"\n                }\n            }\n        }\n    ]\n}\n```\n\n### YOUR TASK\nNow, ignore all previous examples and focus **exclusively** on the data provided below.\n\n**STRICT RULES:**\n1. If the input data is empty or invalid, return an empty list `[]`.\n2. Do NOT invent or hallucinate threats not present in the Input Data below.\n3. Return ONLY the raw JSON object (no Markdown).\n\n### INPUT DATA\nThe following JSON object contains the `primary_threat_A`, `threat_list_B`, and `threat_list_C` you must analyze:\n\n\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        3296,
+        592
+      ],
+      "id": "afbddd0b-9c30-45e1-b13f-c74468f67b42",
+      "name": "AI Agent2"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "o3",
+          "mode": "list",
+          "cachedResultName": "o3"
+        },
+        "options": {
+          "reasoningEffort": "medium",
+          "timeout": 120000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2992,
+        896
+      ],
+      "id": "44fc565a-7e4f-47fa-b404-97db97733ce1",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "fF5RxseBBaYV8hV5",
+          "name": "OpenAi account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {
+          "reset": false
+        }
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2704,
+        576
+      ],
+      "id": "0d903afd-000f-4908-8400-ec097f3ec0f5",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output_ai_act.threat_analysis",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1824,
+        560
+      ],
+      "id": "57bf9d66-9c19-497e-9461-53acb2ac8377",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "maxItems": 20
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        2080,
+        560
+      ],
+      "id": "d9c517ba-9a15-435a-954a-0501a9b9da1b",
+      "name": "Limit"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n    \"valid_compositions\": [\n        {\n            \"threat_A_details\": {\n                \"original_threat\": \"AI-driven Surveillance\",\n                \"svo_representation\": { \"subject\": \"AI surveillance\", \"verb\": \"infringes\", \"object\": \"privacy rights\" }\n            },\n            \"threat_B_details\": {\n                \"original_threat\": \"Psychological Stress\",\n                \"svo_representation\": { \"subject\": \"Privacy violations\", \"verb\": \"cause\", \"object\": \"chronic user anxiety\" }\n            },\n            \"threat_C_details\": {\n                \"original_threat\": \"Workplace Burnout\",\n                \"svo_representation\": { \"subject\": \"Chronic anxiety\", \"verb\": \"leads to\", \"object\": \"employee burnout\" }\n            },\n            \"composition_details\": {\n                \"causal_chain_description\": \"Threat A (Surveillance) directly results in privacy violations, which is the subject of Threat B. The outcome of Threat B (Chronic anxiety) is the direct precursor and cause of Threat C (Employee burnout).\",\n                \"composed_threat_path_description\": \"Intrusive AI surveillance erodes privacy, triggering chronic anxiety which ultimately escalates into severe workplace burnout.\",\n                \"composed_threat_svo\": {\n                    \"subject\": \"Surveillance-induced anxiety\",\n                    \"verb\": \"triggers\",\n                    \"object\": \"systemic workforce burnout\"\n                }\n            }\n        }\n    ]\n}",
+        "autoFix": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        3840,
+        896
+      ],
+      "id": "0c6c5654-f79e-4790-a80f-bf3fac403804",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        3840,
+        1056
+      ],
+      "id": "86cec595-3f01-4a62-a319-44d731616f36",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "fF5RxseBBaYV8hV5",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "data"
+            }
+          ]
+        },
+        "options": {
+          "mergeLists": true
+        }
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        3440,
+        256
+      ],
+      "id": "62ac9d36-91d3-4948-b4e3-7d9cfb3c487c",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fd0dac5d-9d5f-4ab0-a307-3ffcaf8e6c59",
+              "name": "data",
+              "value": "={{ $json.output.valid_compositions}}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2944,
+        256
+      ],
+      "id": "9c70dd12-76e5-4294-a7ef-13d89eccebbe",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "content": "## Remove it\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2016,
+        368
+      ],
+      "typeVersion": 1,
+      "id": "781a2f0c-3efb-4e36-ae21-792ba0cd8114",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ad4e8810-c8cd-4beb-b451-21089f0cc79a",
+              "name": "output.valid_compositions",
+              "value": "={{ $json.output.valid_compositions }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4112,
+        592
+      ],
+      "id": "db4fda0a-850c-4f27-828d-9890927af305",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "operation": "toJson",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        3936,
+        128
+      ],
+      "id": "f94dca56-c3c7-46ee-add9-d9c9d848eec8",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.filtered_threats }}",
+        "options": {
+          "systemMessage": "### ROLE & CONTEXT\n\nYou are an expert agent specializing in cybersecurity threat analysis and Natural Language Processing (NLP). Your primary function is to decompose complex threat descriptions into structured linguistic formats.\n\n### TASK\n\nYour task is to analyze the provided JSON input, which contains a list of threats. For each threat object, you must perform the following actions using clear, instructional verbs:\n\n1.  **Extract** the original threat object.\n2.  **Decompose** its threat into a **SVO (Subject-Verb-Object)** representation, identifying the core actor (Subject), the action (Verb), and the target (Object).\n3.  **Return** a single JSON object containing the complete analysis. You must precisely follow the output structure shown in the few-shot example below.\n\n**IMPORTANT:** Do NOT generate SAVO (Subject-Attribute-Verb-Object) representations. Output ONLY the SVO format.\n\n### EXAMPLE (FEW-SHOT)\n\nThis example uses a threat described in the \"Methodology\" document to demonstrate the expected transformation.\n\n**Example Input JSON:**\n\n```json\n{\n    \"results\": [\n        {\n            \"threats\": [\n                {\n                    \"threat\": \"AI-driven Surveillance Infringement\"\n                }\n            ]\n        }\n    ]\n}\n```\n\n**OUTPUT:**\n\n```json\n{\n    \"threat_analysis\": [\n        {\n            \"original_threat\": {\n                \"threat\": \"AI-driven Surveillance Infringement\"\n            },\n            \"svo_representation\": {\n                \"subject\": \"AI-driven surveillance systems\",\n                \"verb\": \"infringe\",\n                \"object\": \"individuals' privacy rights\"\n            }\n        }\n    ]\n}\n```\n\n### YOUR TASK\nNow, apply the same logic and structure to the JSON input below.\nCRITICAL OUTPUT RULES:\n1. Return ONLY the raw JSON object.\n2. Do NOT use Markdown formatting (no ```json or ``` backticks).\n3. Do NOT include any conversational text."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        624,
+        1168
+      ],
+      "id": "73521a53-5995-4c67-9755-aac8bb35ab79",
+      "name": "AI Agent3"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        624,
+        1328
+      ],
+      "id": "9f15e65b-de55-486f-a28c-e39ce14577be",
+      "name": "OpenAI Chat Model3",
+      "credentials": {
+        "openAiApi": {
+          "id": "fF5RxseBBaYV8hV5",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combineBySql",
+        "numberInputs": 3,
+        "query": "SELECT * FROM input1;\nSELECT * FROM input2;\nSELECT * FROM input3;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1648,
+        752
+      ],
+      "id": "c33c12d5-13a9-49b2-9330-4a6ae32642e4",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "089f20df-e07b-4c03-af63-d60137991903",
+              "name": "output_nis_2",
+              "value": "={{ $json.output }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        928,
+        1168
+      ],
+      "id": "bcbfe5e0-42da-4c9a-8fb4-6aee34b15e7b",
+      "name": "Edit Fields NIS"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3-pro-preview",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        3280,
+        800
+      ],
+      "id": "102dd203-2f6a-4aa9-8a5f-bd4fc6e7ffe3",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "2BrMOOYSAYELIBqW",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## CHANGE IP\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        320,
+        176
+      ],
+      "typeVersion": 1,
+      "id": "961924cc-bf72-4aaa-9b84-8f74a4114f29",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://172.18.0.1:9090/filter_oracol_0",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "threat",
+              "value": "={{$json.results[0].threats}}"
+            },
+            {
+              "name": "context",
+              "value": "nis_2"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        400,
+        768
+      ],
+      "id": "a65ba3fc-c10d-4a9d-a002-36165873ce65",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://172.18.0.1:9090/filter_oracol_0",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "threat",
+              "value": "={{$json.results[0].threats}}"
+            },
+            {
+              "name": "context",
+              "value": "iso_9241-210"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        400,
+        1168
+      ],
+      "id": "d7fee643-7f0c-4400-8a6d-52709bcc03dc",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://172.18.0.1:9090/filter_oracol_0",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "threat",
+              "value": "={{$json.results[0].threats}}"
+            },
+            {
+              "name": "context",
+              "value": "ai_act"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        400,
+        368
+      ],
+      "id": "be36c19b-0e11-40ae-a0e1-56c0c015ff14",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {
+    "When clicking ‘Execute workflow’": [
+      {
+        "json": {}
+      }
+    ]
+  },
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request AI ACT",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request NIS 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request ISO 9241-210",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request ISO 9241-210": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request AI ACT": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request NIS 2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Agent2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent2": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Structured Output Parser",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent3": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields NIS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields NIS": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "609abc51-3b12-4fb0-81c1-9f6cceff8518",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a61c38f2c6d710a341dd5706e3360191d21111126ff9c319e6ebd6005bf5e5b3"
+  },
+  "id": "qwvMSXhc8LOZAlGC",
+  "tags": []
+}
