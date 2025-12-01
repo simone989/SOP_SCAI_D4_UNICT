@@ -42,6 +42,42 @@ The implementation of these scripts is based on a structured methodological fram
 
 ---
 
+## Compositionality Phase
+
+- Consolidated threats are automatically converted into Subject–Attribute–Verb–Object (SAVO) and Subject–Verb–Object (SVO) structures so they can be composed into heterogeneous cause–effect scenarios. The current experiments use **three** regulatory factors (AI Act, NIS 2, ISO 9241-210), yet the methodology scales to $N$ independent factors.
+- Full outputs for the three oracle configurations live in `results/Compositionality/oracle_0/results.json`, `results/Compositionality/oracle_1/results.json`, and `results/Compositionality/oracle_2/results.json`.
+- Each oracle is orchestrated through dedicated n8n workflows stored under `scripts/compositionality/oracle_*/Compositionality 3 context, Oracolo *.json`, which encode the pipeline logic leveraged during experiments.
+- The runtime logic for the auxiliary Python services (required by Oracles 1 and 2) is exposed via HTTP through `scripts/compositionality/oracles_server/main.py`; the n8n workflows invoke these endpoints (for example `/filter_oracol_1` and `/filter_oracol_2`) whenever analyst-driven filtering is needed.
+
+### Low-Human-Intervention Oracle
+
+1. **Fully automated SAVO/SVO conversion** – an `o1-mini` assistant processes the AI Act, NIS 2, and ISO 9241-210 threat sets independently and emits both structured formats.
+2. **Fully automated heterogeneous composition** – a second `o1-mini`, guided by the compositionality prompt, evaluates every cross-context pairing across the three factors and generates multi-factor causal chains (`results/Compositionality/oracle_0/results.json`).
+
+### Medium-Human-Intervention Oracle
+
+1. **SVO conversion** – same automated step as above, limited to the SVO format.
+2. **Analyst-driven topical filter** – for each context (AI Act, NIS 2, ISO 9241-210) an analyst defines a hypernym sentence; BERTopic compares its topics to every threat and retains only those with similarity > 0.55 (endpoint `/filter_oracol_0`).
+3. **LLM composition** – the filtered threats are recombined with the same assistant used in the low-human oracle, yielding tighter scenarios (`results/Compositionality/oracle_1/results.json`).
+
+### Medium-High-Human-Intervention Oracle
+
+1. **SAVO/SVO conversion** – identical to step 1 of the low-human oracle.
+2. **Explicit per-role hypernyms** – analysts define WordNet-derived hypernym lists for Subject, Verb, and Object. The `/filter_oracol_1` endpoint computes cosine similarities against those lists and keeps the top 3 occurrences per role and context.
+3. **Combinatorial composition** – the filtered sets from the three contexts are multiplied via Cartesian product to enumerate all plausible combinations (`results/Compositionality/oracle_2/results.json`).
+
+---
+
+## Cross-Validation of Composed Threats
+
+- The CLI script `scripts/compositionality/cross_check/cross_check.py` implements the cross-validation step described in the paper (Section "Cross Validation"). It can either ingest a pre-shaped JSON payload (`--input`) or read the three oracle outputs directly via `--oracle-files` (defaulting to the JSON artifacts in `results/Compositionality/oracle_*`).
+- Each oracle run is parsed into normalized SVO triples; unique subjects, verbs, and objects are embedded with `SentenceTransformer` (`stsb-roberta-base-v2`). The script then evaluates all cross-run combinations in parallel (Joblib + multicore) and scores them with per-role cosine similarity plus aggregate mean/std statistics.
+- Thresholds replicate the paper’s semantic-overlap criteria (defaults: subject ≥ 0.30, verb ≥ 0.30, object ≥ 0.30, mean ≥ 0.50, std ≤ 0.15). Additional legacy filters can be applied, and results can be capped via `--max-results`.
+- When provided with a composition file (typically the Low-Human oracle output), the script attaches the original Threat A/B pairs and the composed path for traceability, then collapses matches to the reference run to highlight which low-intervention threats are corroborated by the other oracles.
+- Outputs (matches + metadata) are saved as JSON—e.g., `results/Compositionality/cross_check/result_055_tok_k_3.json`—and have shown that roughly 30% of low-intervention compositions are independently rediscovered by the higher-intervention pipelines, confirming semantic consistency across workflows.
+
+---
+
 ## Workflow for Applying the Methodology
 
 1. **Preparation & Data Collection**
@@ -68,6 +104,16 @@ The implementation of these scripts is based on a structured methodological fram
      - Run `merge_similar_threat.py` for further consolidation of batch results.
    - **Finalization:**
      - Run `get_final_threat.py` to download and compile the comprehensive threat data using a specified batch ID, yielding the final aggregated threat summary.
+
+4. **Compositionality Workflows (n8n + HTTP services)**
+   - Start the FastAPI service in `scripts/compositionality/oracles_server/main.py` so that Oracles 1 and 2 can call the `/filter_oracol_0` and `/filter_oracol_1` endpoints during execution.
+   - Import and run the n8n workflow files located under `scripts/compositionality/oracle_*` (one JSON per oracle). Provide the SAVO/SVO threat exports for AI Act, NIS 2, and ISO 9241-210 as inputs; each workflow orchestrates the LLM calls and filtering logic described above.
+   - Collect the resulting composed threats from `results/Compositionality/oracle_0/results.json`, `results/Compositionality/oracle_1/results.json`, and `results/Compositionality/oracle_2/results.json`.
+
+5. **Cross-Validation Workflow**
+   - Run `python scripts/compositionality/cross_check/cross_check.py --oracle-files <path_oracle0> <path_oracle1> <path_oracle2> --output results/Compositionality/cross_check/<file>.json` (adjust options as needed).
+   - Optional flags such as `--mean-sim`, `--sim-subject`, and `--sim-verb` let you tune the semantic-overlap thresholds cited in the paper; `--composition-file` attaches the detailed trace for the selected reference run.
+   - Inspect the generated JSON (e.g., `results/Compositionality/cross_check/result_055_tok_k_3.json`) to review overlaps across oracles and quantify the ~30% consistency rate.
 
 ---
 
