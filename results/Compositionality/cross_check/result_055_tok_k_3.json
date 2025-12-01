@@ -1,0 +1,2067 @@
+[
+  {
+    "threat_A_details": {
+      "original_threat": "Regulatory Enforcement Weaknesses",
+      "svo_representation": {
+        "subject": "weak enforcement mechanisms",
+        "verb": "allow",
+        "object": "non-compliant AI systems to operate"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A allows non-compliant data practices. This results in Threat B (Data Privacy and Security Risks), specifically improper handling. This creates the vector for Threat C (Information Leakage and Unauthorized Data Access), where sensitive information is leaked.",
+      "composed_threat_path_description": "Regulatory oversight failures allow for improper data handling, which directly facilitates unauthorized information leakage.",
+      "composed_threat_svo": {
+        "subject": "regulatory gaps",
+        "verb": "enable",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Fragmented Regulatory Oversight",
+      "svo_representation": {
+        "subject": "inconsistent regulations",
+        "verb": "create",
+        "object": "compliance gaps"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Regulatory gaps (A) lead to a lack of enforced standards for data handling, resulting in privacy risks (B). These risks act as gateways for unauthorized entities to access critical systems (C).",
+      "composed_threat_path_description": "Gaps in regulatory oversight permit weak data security practices, resulting in exposures that unauthorized entities exploit to access critical systems.",
+      "composed_threat_svo": {
+        "subject": "compliance gaps",
+        "verb": "enable",
+        "object": "unauthorized system access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Regulatory Enforcement Weaknesses",
+      "svo_representation": {
+        "subject": "weak enforcement mechanisms",
+        "verb": "allow",
+        "object": "non-compliant AI systems to operate"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Regulatory Enforcement Weaknesses) allows non-compliant systems to operate without scrutiny. This lack of oversight enables Threat B (Data Privacy and Security Risks), where user data is handled improperly. This specific vulnerability creates the conditions for Threat C (Data Breaches), where attackers successfully breach the exposed data.",
+      "composed_threat_path_description": "Weak regulatory enforcement permits the operation of systems with poor data handling practices, creating security risks that attackers exploit to breach sensitive data.",
+      "composed_threat_svo": {
+        "subject": "regulatory weakness",
+        "verb": "facilitates",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Fragmented Regulatory Oversight",
+      "svo_representation": {
+        "subject": "inconsistent regulations",
+        "verb": "create",
+        "object": "compliance gaps"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Fragmented oversight (A) creates compliance gaps that allow organizations to handle data improperly (B). These resulting security risks create vulnerabilities that attackers exploit to breach data (C).",
+      "composed_threat_path_description": "Inconsistent regulatory environments foster negligence in data handling, creating security voids that attackers leverage to execute successful data breaches.",
+      "composed_threat_svo": {
+        "subject": "regulatory inconsistencies",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inadequate Documentation",
+      "svo_representation": {
+        "subject": "lack of documentation",
+        "verb": "hinder",
+        "object": "compliance verification and accountability"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Inadequate documentation (Threat A) leads to improper handling of user data (Threat B). This exposure allows malicious actors to access sensitive information unauthorizedly (Threat C).",
+      "composed_threat_path_description": "Failure to document security protocols leads to unsafe data practices, enabling unauthorized leakage of sensitive information.",
+      "composed_threat_svo": {
+        "subject": "procedural gaps",
+        "verb": "enable",
+        "object": "unauthorized information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Lack of Accountability",
+      "svo_representation": {
+        "subject": "providers and operators",
+        "verb": "avoid",
+        "object": "responsibility for AI abuses"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Lack of Accountability) fosters improper handling of user data (Threat B). This inherent vulnerability is the direct precursor to Threat C (Information Leakage), as sensitive data is not adequately secured.",
+      "composed_threat_path_description": "Negligent data handling practices by unaccountable providers create security gaps that malicious actors exploit to access and leak sensitive information.",
+      "composed_threat_svo": {
+        "subject": "Improper data handling practices",
+        "verb": "enable",
+        "object": "unauthorized information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Unauthorized Deployment",
+      "svo_representation": {
+        "subject": "deployers",
+        "verb": "deploy",
+        "object": "high-risk AI systems without assessments"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "The lack of assessment in deployment (A) leads to improper data handling (B), which provides the entry points for unauthorized entities to access critical systems (C).",
+      "composed_threat_path_description": "The deployment of unassessed systems creates security gaps that enable unauthorized access to critical infrastructure.",
+      "composed_threat_svo": {
+        "subject": "Lack of security assessment",
+        "verb": "facilitates",
+        "object": "unauthorized system access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Non-Compliance",
+      "svo_representation": {
+        "subject": "organizations",
+        "verb": "fail",
+        "object": "adhere to regulations"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Non-Compliance) results in organizations failing to follow data protection standards, leading to Threat B (Data Privacy and Security Risks). This vulnerable state allows attackers to successfully execute Threat C (Data Breaches).",
+      "composed_threat_path_description": "Organizational non-compliance fosters improper data handling practices, creating security voids that malicious actors exploit to breach sensitive data.",
+      "composed_threat_svo": {
+        "subject": "regulatory non-compliance",
+        "verb": "facilitates",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "AI Misuse",
+      "svo_representation": {
+        "subject": "AI systems",
+        "verb": "misuse",
+        "object": "capabilities"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "The misuse of AI capabilities (Threat A) results in improper data handling and security risks (Threat B). These weakened security states allow unauthorized entities to gain access to critical systems (Threat C).",
+      "composed_threat_path_description": "Misuse of AI systems compromises data handling integrity, creating risks that facilitate unauthorized access to critical systems.",
+      "composed_threat_svo": {
+        "subject": "AI-driven data mishandling",
+        "verb": "facilitates",
+        "object": "unauthorized system access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Supply Chain Vulnerabilities",
+      "svo_representation": {
+        "subject": "third-party providers",
+        "verb": "introduce",
+        "object": "risks into the AI value chain"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Supply Chain Vulnerabilities) creates an environment of risk that leads to Threat B (Data Privacy and Security Risks). These specific privacy and security risks provide the necessary opening for Threat C (Unauthorized Access) by unauthorized entities.",
+      "composed_threat_path_description": "Vulnerabilities inherited from the supply chain degrade data security postures, enabling unauthorized entities to gain access to critical systems and data.",
+      "composed_threat_svo": {
+        "subject": "third-party security gaps",
+        "verb": "enable",
+        "object": "unauthorized system access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Economic Disruption",
+      "svo_representation": {
+        "subject": "systemic AI risks",
+        "verb": "disrupt",
+        "object": "markets and operations"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Economic Disruption) leads to rushed or inadequate processes, resulting in improper data handling and privacy risks (Threat B). These created risks and vulnerabilities are then exploited by attackers, resulting in data breaches (Threat C).",
+      "composed_threat_path_description": "Economic instability forces improper data handling practices, creating security voids that attackers exploit to breach sensitive data repositories.",
+      "composed_threat_svo": {
+        "subject": "Resource-constrained security practices",
+        "verb": "enable",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inconsistent Standards",
+      "svo_representation": {
+        "subject": "variable standards",
+        "verb": "lead",
+        "object": "inconsistent safety and performance"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Inconsistent standards (Threat A) lead to improper data handling and privacy risks (Threat B). These risks create the conditions that allow malicious actors to access sensitive information unauthorizedly (Threat C).",
+      "composed_threat_path_description": "Variable standards result in security risks that expose the system, allowing malicious actors to leak or access sensitive information.",
+      "composed_threat_svo": {
+        "subject": "Inconsistent standards",
+        "verb": "enable",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Systemic Failures",
+      "svo_representation": {
+        "subject": "high-impact AI systems",
+        "verb": "cause",
+        "object": "widespread disruptions"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "The widespread disruptions caused by high-impact AI systems (Threat A) create operational chaos, forcing staff to bypass standard protocols, leading to improper handling of user data (Threat B). These resulting privacy and security risks enable attackers to breach data (Threat C).",
+      "composed_threat_path_description": "Systemic AI failures cause widespread disruptions that necessitate emergency data handling procedures; these improper practices create security risks that attackers exploit to breach sensitive data.",
+      "composed_threat_svo": {
+        "subject": "disruption-induced improper data handling",
+        "verb": "facilitates",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Shadow Deployment",
+      "svo_representation": {
+        "subject": "unauthorized deployers",
+        "verb": "deploy",
+        "object": "unregulated AI systems"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Shadow Deployment (Threat A) creates environments where data is handled improperly (Threat B). This lack of control facilitates the unauthorized leakage of sensitive information (Threat C).",
+      "composed_threat_path_description": "Unregulated shadow AI systems mishandle user data, creating pathways for malicious actors to access and leak sensitive information.",
+      "composed_threat_svo": {
+        "subject": "poor data controls",
+        "verb": "facilitate",
+        "object": "unauthorized information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Operational Failures",
+      "svo_representation": {
+        "subject": "AI systems",
+        "verb": "experience",
+        "object": "operational failures"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Operational failures in AI systems lead to improper handling of data, creating privacy and security risks. These exposed risks provide an attack vector for malicious actors to execute data breaches.",
+      "composed_threat_path_description": "The operational failure of AI systems degrades data handling safeguards, creating security risks that attackers exploit to breach sensitive data.",
+      "composed_threat_svo": {
+        "subject": "operational failures",
+        "verb": "enable",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inadequate Documentation",
+      "svo_representation": {
+        "subject": "lack of documentation",
+        "verb": "hinder",
+        "object": "compliance verification and accountability"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Inadequate documentation (Threat A) leads to improper handling of user data (Threat B) because staff lack clear procedures. This improper handling creates vulnerabilities that attackers exploit to breach data (Threat C).",
+      "composed_threat_path_description": "The lack of documented data handling procedures causes staff to manage sensitive data insecurely, creating exposures that result in data breaches.",
+      "composed_threat_svo": {
+        "subject": "undocumented data handling",
+        "verb": "facilitates",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Cybersecurity Vulnerabilities",
+      "svo_representation": {
+        "subject": "weak cybersecurity measures",
+        "verb": "expose",
+        "object": "AI systems to attacks"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Weak cybersecurity measures (Threat A) result in the improper handling of user data, creating privacy and security risks (Threat B). These elevated risks are directly exploited by attackers to breach data (Threat C).",
+      "composed_threat_path_description": "Vulnerabilities in AI systems lead to privacy risks which materialize as data breaches by attackers.",
+      "composed_threat_svo": {
+        "subject": "exposed AI systems",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Human Error",
+      "svo_representation": {
+        "subject": "operators",
+        "verb": "make",
+        "object": "mistakes in AI system management"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Operator errors in system management (Threat A) result in the improper handling of user data (Threat B). This insecure handling creates vulnerabilities that attackers exploit to breach data confidentiality (Threat C).",
+      "composed_threat_path_description": "Human errors in AI system management lead to improper data handling, creating security gaps that result in confirmed data breaches.",
+      "composed_threat_svo": {
+        "subject": "operator-induced data mishandling",
+        "verb": "facilitates",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Shadow Deployment",
+      "svo_representation": {
+        "subject": "unauthorized deployers",
+        "verb": "deploy",
+        "object": "unregulated AI systems"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "The unregulated nature of Shadow Deployment (Threat A) results in improper data handling and security risks (Threat B). These risks lower barriers, allowing unauthorized entities to access critical systems (Threat C).",
+      "composed_threat_path_description": "Unchecked AI deployments create security voids due to improper data handling, enabling unauthorized entities to gain access to critical systems.",
+      "composed_threat_svo": {
+        "subject": "unregulated security postures",
+        "verb": "enable",
+        "object": "unauthorized access to critical systems"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Non-Compliance",
+      "svo_representation": {
+        "subject": "organizations",
+        "verb": "fail",
+        "object": "adhere to regulations"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Non-Compliance) leads to Threat B (Data Privacy and Security Risks) due to poor controls. This results in Threat C (Information Leakage and Unauthorized Data Access).",
+      "composed_threat_path_description": "Failure to follow data protection regulations leads to insecure data handling, resulting in the unauthorized leakage of sensitive information.",
+      "composed_threat_svo": {
+        "subject": "non-compliant data handling",
+        "verb": "causes",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inadequate Human Oversight",
+      "svo_representation": {
+        "subject": "insufficient human oversight",
+        "verb": "allow",
+        "object": "unmonitored AI operations"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Insufficient oversight allows the AI to operate without security checks (Threat A), leading to improper handling of user data (Threat B). This insecure environment permits unauthorized entities to access critical systems and data (Threat C).",
+      "composed_threat_path_description": "Unchecked AI operations mishandle data credentials or access controls, allowing unauthorized entities to compromise critical systems.",
+      "composed_threat_svo": {
+        "subject": "oversight deficiencies",
+        "verb": "enable",
+        "object": "unauthorized access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inadequate Risk Assessment",
+      "svo_representation": {
+        "subject": "organizations",
+        "verb": "fail",
+        "object": "identify and manage AI risks"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Inadequate Risk Assessment) leads to insecure data practices (Threat B). These security risks weaken access controls, allowing Threat C (Unauthorized Access) by malicious entities.",
+      "composed_threat_path_description": "Inadequate assessment of security risks leads to improper data handling, which creates pathways for unauthorized entities to access critical systems.",
+      "composed_threat_svo": {
+        "subject": "poor security planning",
+        "verb": "facilitates",
+        "object": "unauthorized system access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Systemic Failures",
+      "svo_representation": {
+        "subject": "high-impact AI systems",
+        "verb": "cause",
+        "object": "widespread disruptions"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A's disruptions lead to improper data handling (Threat B), creating security risks that result in unauthorized information leakage (Threat C).",
+      "composed_threat_path_description": "Systemic disruptions force insecure data handling, resulting in the unauthorized leakage of sensitive information by malicious actors.",
+      "composed_threat_svo": {
+        "subject": "insecure data handling",
+        "verb": "causes",
+        "object": "sensitive information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "System Malfunction",
+      "svo_representation": {
+        "subject": "AI systems",
+        "verb": "malfunction",
+        "object": "operations"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (System Malfunction) leads to improper data handling and security risks (Threat B). Attackers exploit these created risks to conduct Data Breaches (Threat C).",
+      "composed_threat_path_description": "Malfunctioning AI operations create data security gaps that attackers exploit to breach systems and steal data.",
+      "composed_threat_svo": {
+        "subject": "malfunction-generated vulnerabilities",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inadequate Risk Assessment",
+      "svo_representation": {
+        "subject": "organizations",
+        "verb": "fail",
+        "object": "identify and manage AI risks"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Inadequate Risk Assessment) leads to improper data handling (Threat B). This directly facilitates Threat C (Information Leakage), as sensitive data is not adequately protected.",
+      "composed_threat_path_description": "Negligence in assessing data risks leads to insecure handling practices, resulting in the unauthorized leakage of sensitive information.",
+      "composed_threat_svo": {
+        "subject": "improper data handling",
+        "verb": "causes",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Unauthorized Modifications",
+      "svo_representation": {
+        "subject": "unauthorized actors",
+        "verb": "modify",
+        "object": "AI systems without assessments"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "The improper data handling resulting from Threat A (Threat B) directly leads to the unauthorized leakage of sensitive information (Threat C).",
+      "composed_threat_path_description": "Unassessed modifications compromise data handling procedures, resulting in the leakage of sensitive information to unauthorized parties.",
+      "composed_threat_svo": {
+        "subject": "improper data handling",
+        "verb": "causes",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inadequate Risk Assessment",
+      "svo_representation": {
+        "subject": "organizations",
+        "verb": "fail",
+        "object": "identify and manage AI risks"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Inadequate Risk Assessment) leads to improper data handling (Threat B). This directly facilitates Threat C (Information Leakage), as sensitive data is not adequately protected.",
+      "composed_threat_path_description": "Negligence in assessing data risks leads to insecure handling practices, resulting in the unauthorized leakage of sensitive information.",
+      "composed_threat_svo": {
+        "subject": "improper data handling",
+        "verb": "causes",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Unauthorized Modifications",
+      "svo_representation": {
+        "subject": "unauthorized actors",
+        "verb": "modify",
+        "object": "AI systems without assessments"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "The improper data handling resulting from Threat A (Threat B) directly leads to the unauthorized leakage of sensitive information (Threat C).",
+      "composed_threat_path_description": "Unassessed modifications compromise data handling procedures, resulting in the leakage of sensitive information to unauthorized parties.",
+      "composed_threat_svo": {
+        "subject": "improper data handling",
+        "verb": "causes",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Privacy Violation",
+      "svo_representation": {
+        "subject": "AI systems",
+        "verb": "violate",
+        "object": "individuals' privacy rights"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "The primary threat of Privacy Violation (A) signifies and contributes to the broader Data Privacy and Security Risks (B), specifically regarding improper data handling. This state of risk creates vulnerabilities that allow Attackers to Breach Data (C).",
+      "composed_threat_path_description": "AI systems violating privacy rights exacerbate data security risks, creating openings for attackers to execute data breaches.",
+      "composed_threat_svo": {
+        "subject": "Privacy-violating AI systems",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Loss of Trust",
+      "svo_representation": {
+        "subject": "stakeholders",
+        "verb": "lose",
+        "object": "trust in AI technologies"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Poor User Engagement",
+      "svo_representation": {
+        "subject": "non-user-friendly systems",
+        "verb": "cause",
+        "object": "poor user engagement"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Vulnerability Exploitation",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "exploit",
+        "object": "known vulnerabilities"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Loss of trust (A) leads to poor user engagement and neglect of system maintenance (B). This neglect creates an environment where known vulnerabilities are not addressed, facilitating their exploitation by attackers (C).",
+      "composed_threat_path_description": "Diminished trust results in poor user engagement and oversight, creating security gaps that allow attackers to easily exploit known system vulnerabilities.",
+      "composed_threat_svo": {
+        "subject": "Lack of user oversight",
+        "verb": "facilitates",
+        "object": "vulnerability exploitation"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Discrimination and Bias",
+      "svo_representation": {
+        "subject": "biased AI algorithms",
+        "verb": "produce",
+        "object": "discriminatory outcomes"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Misalignment of User Needs",
+      "svo_representation": {
+        "subject": "system design",
+        "verb": "misalign",
+        "object": "user needs"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Discriminatory outcomes (Threat A) mean the system fails to meet the needs of specific user groups, causing misalignment (Threat B). Users facing this misalignment are forced to bypass standard protocols or use unauthorized tools to achieve their goals, leading to unauthorized access incidents (Threat C).",
+      "composed_threat_path_description": "Biased systems misalign with user needs, provoking users to bypass controls and engage in unauthorized access to perform their tasks.",
+      "composed_threat_svo": {
+        "subject": "system misalignment",
+        "verb": "provokes",
+        "object": "unauthorized access attempts"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inadequate Human Oversight",
+      "svo_representation": {
+        "subject": "insufficient human oversight",
+        "verb": "allow",
+        "object": "unmonitored AI operations"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Inadequate human oversight allows unmonitored AI operations to persist (Threat A). These unmonitored operations often involve improper handling of sensitive user data, creating privacy and security risks (Threat B). These created risks are directly exploited by attackers to cause data breaches (Threat C).",
+      "composed_threat_path_description": "Lack of human supervision over AI systems leads to unchecked data handling practices, creating vulnerabilities that result in large-scale data breaches.",
+      "composed_threat_svo": {
+        "subject": "unmonitored AI data handling",
+        "verb": "facilitates",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized individuals",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Unauthorized Access (A) acts as the trigger for Data Privacy and Security Risks (B) by exposing sensitive systems. These elevated risks allow malicious actors to exploit the situation, leading to Information Leakage (C) where sensitive information is accessed unauthorizedly.",
+      "composed_threat_path_description": "The intrusion of unauthorized individuals into systems generates privacy risks that culminate in the unauthorized leakage of sensitive information by malicious actors.",
+      "composed_threat_svo": {
+        "subject": "access-related privacy risks",
+        "verb": "cause",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Manipulative AI Practices",
+      "svo_representation": {
+        "subject": "AI systems",
+        "verb": "manipulate",
+        "object": "user behavior"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Manipulative AI) creates opportunities for improper data handling (Threat B). This weak security posture regarding user data allows malicious actors to exploit the situation, leading to Threat C (Information Leakage).",
+      "composed_threat_path_description": "Deceptive data collection practices create privacy risks that allow malicious actors to access and leak sensitive information unauthorizedly.",
+      "composed_threat_svo": {
+        "subject": "Deceptive data collection",
+        "verb": "facilitates",
+        "object": "unauthorized information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Cybersecurity Vulnerabilities",
+      "svo_representation": {
+        "subject": "weak cybersecurity measures",
+        "verb": "expose",
+        "object": "AI systems to attacks"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Exposure of AI systems to attacks (Threat A) fosters an environment of improper data handling and risk (Threat B), which enables unauthorized entities to access critical systems (Threat C).",
+      "composed_threat_path_description": "Weak security measures create risks that allow unauthorized access to critical systems and data.",
+      "composed_threat_svo": {
+        "subject": "security vulnerabilities",
+        "verb": "enable",
+        "object": "unauthorized access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Supply Chain Vulnerabilities",
+      "svo_representation": {
+        "subject": "third-party providers",
+        "verb": "introduce",
+        "object": "risks into the AI value chain"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Supply Chain Vulnerabilities) introduces risks via third parties, which manifests as Threat B (Data Privacy and Security Risks) through improper data handling. This security gap directly facilitates Threat C (Data Breaches), allowing attackers to compromise data.",
+      "composed_threat_path_description": "Risks introduced by third-party providers lead to improper data handling practices, creating security vulnerabilities that attackers exploit to breach sensitive data systems.",
+      "composed_threat_svo": {
+        "subject": "supply chain security flaws",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Unauthorized Modifications",
+      "svo_representation": {
+        "subject": "unauthorized actors",
+        "verb": "modify",
+        "object": "AI systems without assessments"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Increased Error Rates",
+      "svo_representation": {
+        "subject": "ineffective design",
+        "verb": "increase",
+        "object": "error rates"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Integrity and Confidentiality Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data integrity and confidentiality"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Unauthorized modifications cause increased error rates (Threat B), which lead to corruption and breaches of data integrity (Threat C).",
+      "composed_threat_path_description": "High error rates resulting from unassessed modifications cause widespread data integrity and confidentiality breaches.",
+      "composed_threat_svo": {
+        "subject": "operational errors",
+        "verb": "cause",
+        "object": "data integrity breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inconsistent Standards",
+      "svo_representation": {
+        "subject": "variable standards",
+        "verb": "lead",
+        "object": "inconsistent safety and performance"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Inconsistent standards (Threat A) lead to improper handling of user data, manifesting as data privacy and security risks (Threat B). These unmitigated risks provide the vulnerabilities necessary for attackers to successfully breach data (Threat C).",
+      "composed_threat_path_description": "Variable standards in development result in improper data handling and privacy risks, which ultimately expose the organization to successful data breaches by attackers.",
+      "composed_threat_svo": {
+        "subject": "Variable standards",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Human Error",
+      "svo_representation": {
+        "subject": "operators",
+        "verb": "make",
+        "object": "mistakes in AI system management"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Mistakes by operators (Threat A) lead to the improper handling of user data and permissions (Threat B), which directly allows unauthorized entities to access critical systems (Threat C).",
+      "composed_threat_path_description": "Operational mistakes degrade data safeguards, enabling unauthorized entities to gain access to critical systems and data.",
+      "composed_threat_svo": {
+        "subject": "management errors",
+        "verb": "enable",
+        "object": "unauthorized system access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Shadow Deployment",
+      "svo_representation": {
+        "subject": "unauthorized deployers",
+        "verb": "deploy",
+        "object": "unregulated AI systems"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Shadow Deployment (Threat A) introduces unregulated systems that handle data improperly, creating privacy and security risks (Threat B). These specific security risks provide the vulnerabilities necessary for attackers to execute data breaches (Threat C).",
+      "composed_threat_path_description": "Unauthorized deployment of unregulated AI systems leads to improper data handling, creating security gaps that attackers exploit to breach sensitive data.",
+      "composed_threat_svo": {
+        "subject": "shadow deployment vulnerabilities",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Privacy Violation",
+      "svo_representation": {
+        "subject": "AI systems",
+        "verb": "violate",
+        "object": "individuals' privacy rights"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Privacy Violations (A) imply the existence of Data Privacy and Security Risks (B). The improper handling of data inherent in B facilitates Information Leakage and Unauthorized Data Access (C).",
+      "composed_threat_path_description": "Privacy violations stem from insecure data practices that directly facilitate unauthorized access and information leakage by malicious actors.",
+      "composed_threat_svo": {
+        "subject": "Improper AI data handling",
+        "verb": "causes",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Data Misuse",
+      "svo_representation": {
+        "subject": "actors",
+        "verb": "misuse",
+        "object": "sensitive data"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Data Misuse) results in the improper handling identified in Threat B, generating security risks. These risks weaken system defenses, directly enabling the outcome of Threat C (Unauthorized Access) by unauthorized entities.",
+      "composed_threat_path_description": "The misuse of sensitive data generates security risks that lower defenses, allowing unauthorized entities to gain access to critical systems and data.",
+      "composed_threat_svo": {
+        "subject": "misuse-driven security risks",
+        "verb": "enable",
+        "object": "unauthorized system access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Deceptive Practices",
+      "svo_representation": {
+        "subject": "AI-generated content",
+        "verb": "deceive",
+        "object": "users"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Primary Threat A (Deceptive Practices) leads users to mistake AI fabrications for reality, resulting in Threat B (Data Privacy and Security Risks) where users improperly handle sensitive data. This unsafe handling creates vulnerabilities that are exploited in Threat C (Information Leakage), resulting in unauthorized data access.",
+      "composed_threat_path_description": "AI-driven deception tricks users into bypassing safety protocols, creating privacy risks that ultimately result in unauthorized information leakage.",
+      "composed_threat_svo": {
+        "subject": "AI-driven deception",
+        "verb": "facilitates",
+        "object": "unauthorized information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Unauthorized Deployment",
+      "svo_representation": {
+        "subject": "deployers",
+        "verb": "deploy",
+        "object": "high-risk AI systems without assessments"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Unauthorized deployment (A) leads to improper data protection (B), resulting in the leakage of sensitive information (C).",
+      "composed_threat_path_description": "Neglecting assessment creates security gaps that lead to the unauthorized leakage of sensitive information.",
+      "composed_threat_svo": {
+        "subject": "Improper data handling",
+        "verb": "results in",
+        "object": "sensitive information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Adversarial Attacks",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "launch",
+        "object": "adversarial inputs"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Increased Error Rates",
+      "svo_representation": {
+        "subject": "ineffective design",
+        "verb": "increase",
+        "object": "error rates"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Integrity and Confidentiality Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data integrity and confidentiality"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Adversarial Attacks) induces failures that manifest as Threat B (Increased Error Rates). High error rates in data processing systems undermine trust and correctness, leading to Threat C (Data Integrity and Confidentiality Breaches).",
+      "composed_threat_path_description": "Adversarial attacks degrade decision accuracy, increasing error rates which directly breach the integrity and confidentiality of processed data.",
+      "composed_threat_svo": {
+        "subject": "adversarial input-induced errors",
+        "verb": "cause",
+        "object": "data integrity breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Human Error",
+      "svo_representation": {
+        "subject": "operators",
+        "verb": "make",
+        "object": "mistakes in AI system management"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Operator errors (Threat A) result in improper data handling (Threat B), which exposes the organization to information leakage and unauthorized access by malicious actors (Threat C).",
+      "composed_threat_path_description": "Management mistakes regarding user data lead to privacy risks that result in the leakage of sensitive information to unauthorized parties.",
+      "composed_threat_svo": {
+        "subject": "improper data management",
+        "verb": "results in",
+        "object": "information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Unauthorized Modifications",
+      "svo_representation": {
+        "subject": "unauthorized actors",
+        "verb": "modify",
+        "object": "AI systems without assessments"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Unauthorized modifications) leads to improper data handling (Threat B), creating entry points that allow unauthorized entities to access critical systems (Threat C).",
+      "composed_threat_path_description": "Unassessed modifications weaken access controls, enabling unauthorized entities to infiltrate critical systems.",
+      "composed_threat_svo": {
+        "subject": "unassessed changes",
+        "verb": "facilitate",
+        "object": "unauthorized system access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Lack of Accountability",
+      "svo_representation": {
+        "subject": "providers and operators",
+        "verb": "avoid",
+        "object": "responsibility for AI abuses"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Increased Error Rates",
+      "svo_representation": {
+        "subject": "ineffective design",
+        "verb": "increase",
+        "object": "error rates"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Lack of Accountability) results in ineffective design that increases error rates (Threat B). High rates of human error directly facilitate accidental exposures, leading to Threat C (Data Breaches).",
+      "composed_threat_path_description": "Negligent provider accountability results in error-prone designs, where increased user mistakes inadvertently expose sensitive data to attackers.",
+      "composed_threat_svo": {
+        "subject": "Design-induced user errors",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Lack of Transparency",
+      "svo_representation": {
+        "subject": "opaque AI decision-making processes",
+        "verb": "hinder",
+        "object": "trust and understanding"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Increased Error Rates",
+      "svo_representation": {
+        "subject": "ineffective design",
+        "verb": "increase",
+        "object": "error rates"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "The opacity of AI decision-making (Threat A) confuses users, leading to ineffective usage and increased error rates (Threat B). These human errors create security vulnerabilities (e.g., misconfigurations or accidental exposures) that attackers exploit to breach data (Threat C).",
+      "composed_threat_path_description": "Lack of transparency in the AI system leads to user confusion and frequent operational errors, which subsequently create vulnerabilities that allow attackers to successfully execute data breaches.",
+      "composed_threat_svo": {
+        "subject": "opacity-induced user errors",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Regulatory Enforcement Weaknesses",
+      "svo_representation": {
+        "subject": "weak enforcement mechanisms",
+        "verb": "allow",
+        "object": "non-compliant AI systems to operate"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A allows the deployment of systems that ignore security standards. This results in Threat B (Data Privacy and Security Risks), specifically the improper handling of access controls. This vulnerability directly enables Threat C (Unauthorized Access), allowing unauthorized entities to access critical systems.",
+      "composed_threat_path_description": "Ineffective regulation allows systems with inadequate security measures to operate, creating openings that unauthorized entities use to access critical systems.",
+      "composed_threat_svo": {
+        "subject": "lax enforcement",
+        "verb": "enables",
+        "object": "unauthorized access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Discrimination and Bias",
+      "svo_representation": {
+        "subject": "biased AI algorithms",
+        "verb": "produce",
+        "object": "discriminatory outcomes"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Biased AI algorithms produce discriminatory outcomes (Threat A), which inherently constitute a form of improper handling of sensitive user data, creating privacy risks (Threat B). These created risks and the mishandling of data open vulnerabilities that malicious actors can exploit to leak or access sensitive information unauthorizedly (Threat C).",
+      "composed_threat_path_description": "The generation of discriminatory outcomes by biased AI implies the improper processing of user data, creating privacy vulnerabilities that inevitably lead to unauthorized information leakage by malicious actors.",
+      "composed_threat_svo": {
+        "subject": "biased data handling",
+        "verb": "facilitates",
+        "object": "unauthorized information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Economic Disruption",
+      "svo_representation": {
+        "subject": "systemic AI risks",
+        "verb": "disrupt",
+        "object": "markets and operations"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Economic Disruption) creates data handling risks (Threat B). These risks materialize as unauthorized information leakage to external or malicious actors (Threat C).",
+      "composed_threat_path_description": "Systemic disruption compromises data handling procedures, resulting in the unauthorized leakage of sensitive information.",
+      "composed_threat_svo": {
+        "subject": "Improper data handling",
+        "verb": "triggers",
+        "object": "sensitive information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Data Misuse",
+      "svo_representation": {
+        "subject": "actors",
+        "verb": "misuse",
+        "object": "sensitive data"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Data Misuse) constitutes improper handling of data, which directly creates the specific condition of Threat B (Data Privacy and Security Risks). These elevated risks and vulnerabilities are then exploited by attackers, leading to the outcome of Threat C (Data Breaches).",
+      "composed_threat_path_description": "Actors misusing sensitive data create significant privacy and security risks, which materialize when attackers exploit these vulnerabilities to successfully breach data systems.",
+      "composed_threat_svo": {
+        "subject": "data misuse practices",
+        "verb": "facilitate",
+        "object": "data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Loss of Data Integrity",
+      "svo_representation": {
+        "subject": "data corruption or unauthorized alterations",
+        "verb": "compromise",
+        "object": "AI output reliability"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Increased Error Rates",
+      "svo_representation": {
+        "subject": "ineffective design",
+        "verb": "increase",
+        "object": "error rates"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Integrity and Confidentiality Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data integrity and confidentiality"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Threat A (Loss of Data Integrity) confuses users and degrades decision-making quality, leading to Threat B (Increased Error Rates). These human/operational errors inadvertently expose sensitive information or weaken defenses, allowing attackers to execute Threat C (Data Integrity and Confidentiality Breaches).",
+      "composed_threat_path_description": "Corrupted data leads to frequent user errors, which inadvertently expose system vulnerabilities and sensitive data to breach by attackers.",
+      "composed_threat_svo": {
+        "subject": "operational human errors",
+        "verb": "enable",
+        "object": "successful data breaches"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Fragmented Regulatory Oversight",
+      "svo_representation": {
+        "subject": "inconsistent regulations",
+        "verb": "create",
+        "object": "compliance gaps"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Information Leakage and Unauthorized Data Access",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "leak or access",
+        "object": "sensitive information unauthorizedly"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Inconsistent regulations (A) result in poor data handling practices (B). This insecure state directly facilitates the unauthorized leakage of sensitive information by malicious actors (C).",
+      "composed_threat_path_description": "Regulatory fragmentation undermines data protection standards, leading to security lapses that allow malicious actors to leak sensitive information.",
+      "composed_threat_svo": {
+        "subject": "fragmented oversight",
+        "verb": "results in",
+        "object": "unauthorized information leakage"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Systemic Failures",
+      "svo_representation": {
+        "subject": "high-impact AI systems",
+        "verb": "cause",
+        "object": "widespread disruptions"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Vulnerability Exploitation",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "exploit",
+        "object": "known vulnerabilities"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "The disruptions from Threat A induce improper data handling (Threat B), creating risks that attackers exploit to leverage known vulnerabilities (Threat C).",
+      "composed_threat_path_description": "Disruptions cause a lapse in security protocols, generating risks that allow attackers to exploit known vulnerabilities within the system.",
+      "composed_threat_svo": {
+        "subject": "security protocol lapses",
+        "verb": "expose",
+        "object": "known vulnerabilities"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Information Leakage",
+      "svo_representation": {
+        "subject": "inadequate security measures",
+        "verb": "expose",
+        "object": "sensitive information"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Unauthorized Access",
+      "svo_representation": {
+        "subject": "unauthorized entities",
+        "verb": "access",
+        "object": "critical systems and data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Information Leakage (A) constitutes improper data handling that creates Data Privacy and Security Risks (B). These risks create vulnerabilities that Unauthorized Entities exploit to gain Access (C).",
+      "composed_threat_path_description": "Inadequate security measures expose sensitive information, creating data privacy risks that allow unauthorized entities to access critical systems and data.",
+      "composed_threat_svo": {
+        "subject": "information leakage-induced risks",
+        "verb": "enable",
+        "object": "unauthorized system access"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Malicious Use of AI",
+      "svo_representation": {
+        "subject": "malicious actors",
+        "verb": "exploit",
+        "object": "AI technologies for harm"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Data Privacy and Security Risks",
+      "svo_representation": {
+        "subject": "improper handling of user data",
+        "verb": "create",
+        "object": "privacy and security risks"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Malicious actors using AI (Threat A) can conduct inference or de-anonymization attacks, creating severe data privacy and security risks (Threat B). These elevated risks, when exploited, directly result in data breaches (Threat C), compromising sensitive information.",
+      "composed_threat_path_description": "Malicious use of AI technologies to de-anonymize or infer sensitive data escalates privacy risks, which subsequently materialize into actual data breaches.",
+      "composed_threat_svo": {
+        "subject": "AI-driven inference attacks",
+        "verb": "cause",
+        "object": "data breaches via privacy risk escalation"
+      }
+    }
+  },
+  {
+    "threat_A_details": {
+      "original_threat": "Inconsistent Standards",
+      "svo_representation": {
+        "subject": "variable standards",
+        "verb": "lead",
+        "object": "inconsistent safety and performance"
+      }
+    },
+    "threat_B_details": {
+      "original_threat": "Increased Error Rates",
+      "svo_representation": {
+        "subject": "ineffective design",
+        "verb": "increase",
+        "object": "error rates"
+      }
+    },
+    "threat_C_details": {
+      "original_threat": "Data Integrity and Confidentiality Breaches",
+      "svo_representation": {
+        "subject": "attackers",
+        "verb": "breach",
+        "object": "data integrity and confidentiality"
+      }
+    },
+    "composition_details": {
+      "causal_chain_description": "Inconsistent standards (Threat A) cause ineffective system design, which increases error rates (Threat B). High error rates and ineffective design lead to accidental breaches of data integrity and confidentiality (Threat C).",
+      "composed_threat_path_description": "Inconsistent standards lead to error-prone designs, increasing user errors which result in breaches of data integrity and confidentiality.",
+      "composed_threat_svo": {
+        "subject": "Design-induced errors",
+        "verb": "cause",
+        "object": "data integrity breaches"
+      }
+    }
+  }
+]
